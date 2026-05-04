@@ -7,8 +7,8 @@
 
 ## Portfolio Info
 - **Nama:** [Rizky Anugrah Septiawan]
-- **Repository:** [GitHub URL]
-- **Live URL:** [GitHub Pages URL]
+- **Repository:** [https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio]
+- **Live URL:** [https://rizkyanugrah77.github.io/Rizky_Anugrah-portfolio/]
 - **Date:** [05 Mei 2026]
 
 ---
