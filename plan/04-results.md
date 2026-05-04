@@ -14,14 +14,12 @@
 ---
 
 ## Screenshot: Desktop
-
-[assets/Screenshot-Desktop.png]
+  [ https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio/blob/main/assets/img/Screenshot-Desktop.png ]
 
 ---
 
 ## Screenshot: Mobile
-
-[assets/Screenshot-Mobile.png]
+[ https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio/blob/main/assets/img/Screenshot-Mobile.png ]
 
 ---
 
@@ -54,7 +52,7 @@ Output:
 2. Typography recommendation
 3. Section structure
 4. 1 unique element]
-How I Solved: [Saya menganalisis ulang soal challenge dari ai dan membuat ulang pengertian tata cara membuat prompt yg terstruktur dari ai]
+How I Solved: [ Saya menganalisis ulang soal challenge dari ai dan membuat ulang pengertian tata cara membuat prompt yg terstruktur dari ai lalu dieksekusi di vscode dengan codex/chatgpt]
 
 Challenge 2: [Deskripsi]
 How I Solved: [Solution]
