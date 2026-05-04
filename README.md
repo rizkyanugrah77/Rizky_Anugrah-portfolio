@@ -83,6 +83,8 @@ Save
 
 **Live URL:** `https://[username].github.io/[repo]/`
 
+Referensi: [Github Pages Tutorials](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
+
 ---
 
 ## Technical Requirements
