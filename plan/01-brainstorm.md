@@ -9,28 +9,28 @@ Role: UX/UI consultant untuk portfolio developer.
 Task: Bantu brainstorm desain portfolio untuk fresh graduate IT.
 
 Context:
-- Nama: [NAMA]
-- Skills: [LIST]
-- Target: [STARTUP / CORPORATE]
+- Nama: [Rizky Anugrah Septiawan]
+- Skills: [HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, PHP, Laravel, MySQL, RESTful APIs, ERD]
+- Target: [STARTUP]
 
 Constraints:
 - Mobile-first
 - Simple tapi stand out
 
 Output:
-1. 3 color palette options
-2. Typography recommendation
-3. Section structure
+1. 3 color palette options = Teal, Cyan, Black 
+2. Typography recommendation = Poppins 
+3. Section structure = HTML5 + CSS3 / Tailwind css
 4. 1 unique element
 ```
 
 ### 2. Lanjutkan Diskusi
 
 Tanya tentang:
-- "Kenapa pilih warna ini?"
-- "Inter vs Poppins, mana lebih cocok?"
-- "Single page vs multi-page?"
-- "Bagaimana beda dari candidate lain?"
+- "Kenapa pilih warna ini? memberikan kesan modern, tech dan clean serta black menambah kesan premium dan profesional"
+- "Inter vs Poppins, mana lebih cocok? Poppins karena lebih friendly dan modern"
+- "Single page vs multi-page? single page karena simpel dan cepat"
+- "Bagaimana beda dari candidate lain? template, list skill, live priview project "
 
 ---
 
