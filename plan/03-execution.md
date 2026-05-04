@@ -27,7 +27,7 @@ SETIAP STEP:
 ## Template
 
 ```markdown
-# Execution — [CODEX]
+# Execution — [VSCode/CODEX]
 
 ## Step 1: [Rancang portfolio mobile-first]
 
