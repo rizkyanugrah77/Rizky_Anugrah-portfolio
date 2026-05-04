@@ -8,14 +8,19 @@ Siapa AI dalam konteks ini?
 
 [Jawab: Contoh "Senior front-end developer dengan keahlian HTML semantik + CSS modern"]
 
----
+## Jawaban
+[ 
+    Sebagai asisten saya (developer) dalam membangun website portfolio dengan tech semantik HTML, CSS, dan Tailwind CSS
+]
 
 ## T — Task
 Apa tugas utama project ini?
 
-[Jawab: Contoh "Buat portfolio satu halaman untuk fresh graduate IT"]
+## Jawaban
+[
+    Tugas utama dalam project ini yaitu membuat website portfolio fresh graduate IT dengan bantuan ai untuk membangun website
+]
 
----
 
 ## C — Context
 Tech stack, constraints, standards:
@@ -24,9 +29,14 @@ Tech stack, constraints, standards:
 - Approach: [Mobile-first]
 - Audience: [Recruiter HR / Tech Lead]
 
-[Jawab sendiri di sini]
+## Jawaban
+[
+-Tech: HTML5, CSS3, TailwindCSS, Javascript
+-Approach: Mobile & PC
+- Audience:  Tech Lead
+]
 
----
+
 
 ## C — Constraints
 Yang TIDAK boleh:
@@ -38,9 +48,14 @@ Yang WAJIB:
 - [Responsive mobile-first]
 - [Accessibility basics]
 
-[Jawab sendiri di sini]
+## Jawaban
+[
+-Semantic HTML5 elements
+-Responsive mobile-first
+-Accessibility basics
+]
 
----
+
 
 ## O — Output
 Format yang diinginkan:
@@ -49,17 +64,22 @@ Format yang diinginkan:
 - [HANYA kode / dengan penjelasan]
 - [dst]
 
-[Jawab sendiri di sini]
-```
+## Jawaban
+[
+-Wireframe deskripsi (bukan gambar)
+-UI guideline
+-Tailwind class suggestion (opsional)
+-UX reasoning (kenapa desain ini efektif untuk startup hiring)
+]
 
----
+
 
 ## Checklist
 
 ```
-[] R — Role jelas?
-[] T — Task konkret?
-[] C — Context mencakup tech stack?
-[] C — Constraints spesifik?
-[] O — Output format jelas?
+[✅] R — Role jelas?
+[✅] T — Task konkret?
+[✅] C — Context mencakup tech stack?
+[✅] C — Constraints spesifik?
+[✅] O — Output format jelas?
 ```

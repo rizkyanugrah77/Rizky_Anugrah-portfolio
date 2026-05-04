@@ -3,25 +3,25 @@
 ## Template
 
 ```markdown
-# Final Results — [Nama]
+# Final Results — [Rizky Anugrah Septiawan]
 
 ## Portfolio Info
-- **Nama:** [Nama Lengkap]
+- **Nama:** [Rizky Anugrah Septiawan]
 - **Repository:** [GitHub URL]
 - **Live URL:** [GitHub Pages URL]
-- **Date:** [Tanggal]
+- **Date:** [05 Mei 2026]
 
 ---
 
 ## Screenshot: Desktop
 
-[paste screenshot — all sections visible]
+[assets/Screenshot-Desktop.png]
 
 ---
 
 ## Screenshot: Mobile
 
-[paste screenshot — responsive, no horizontal scroll]
+[assets/Screenshot-Mobile.png]
 
 ---
 
@@ -37,8 +37,24 @@
 
 ## Challenges & Solutions
 
-Challenge 1: [Deskripsi]
-How I Solved: [Solution]
+Challenge 1: [Role: UX/UI consultant untuk portfolio developer.
+Task: Bantu brainstorm desain portfolio untuk fresh graduate IT.
+
+Context:
+- Nama: [NAMA]
+- Skills: [LIST]
+- Target: [STARTUP / CORPORATE]
+
+Constraints:
+- Mobile-first
+- Simple tapi stand out
+
+Output:
+1. 3 color palette options
+2. Typography recommendation
+3. Section structure
+4. 1 unique element]
+How I Solved: [Saya membuat ulang pengertian tata cara membuat prompt yg baik dari ai]
 
 Challenge 2: [Deskripsi]
 How I Solved: [Solution]
@@ -49,11 +65,11 @@ How I Solved: [Solution]
 ## Checklist
 
 ```
-[] Desktop screenshot ada?
-[] Mobile screenshot ada?
-[] No horizontal scroll?
-[] All sections visible?
-[] 3+ insights documented?
-[] Challenges solved documented?
-[] GitHub Pages URL available?
+[✅] Desktop screenshot ada?
+[✅] Mobile screenshot ada?
+[✅] No horizontal scroll?
+[✅] All sections visible?
+[✅] 3+ insights documented?
+[✅] Challenges solved documented?
+[✅] GitHub Pages URL available?
 ```
