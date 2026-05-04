@@ -54,7 +54,7 @@ Output:
 2. Typography recommendation
 3. Section structure
 4. 1 unique element]
-How I Solved: [Saya membuat ulang pengertian tata cara membuat prompt yg baik dari ai]
+How I Solved: [Saya menganalisis ulang soal challenge dari ai dan membuat ulang pengertian tata cara membuat prompt yg terstruktur dari ai]
 
 Challenge 2: [Deskripsi]
 How I Solved: [Solution]
