@@ -132,6 +132,6 @@ See: `plan/02-details.md`
 
 ---
 
-**Deadline:** [Tanggal]
+**Deadline:** [05/05/2026]
 
 **Submit:** GitHub Repository URL + GitHub Pages URL
