@@ -694,9 +694,9 @@ Lebih mudah langsung dijadikan implementasi]
 ## Key Decisions
 | Decision | Value | Why |
 |----------|-------|-----|
-| Color | [Teal, Cyan, Black] | [simple, modern dan mata tidak lelah untuk melihat lama] |
+| Color | [Teal, Cyan, Black] | [simple, modern dan mata tidak lelah untuk melihat lama ] |
 | Typography | [Poppins] | [Biasa dipakai dalam website modern startup dan font simple mudah dibaca] |
-| Layout | [1440, 728, 480] | [agar pas untuk Layar Desktop, Tablet, dan handphone] |
+| Layout | [1440p, 728p, 480p] | [agar pas untuk Layar Desktop, Tablet, dan handphone] |
 | Style | [Minimalist, Clean UI, Modern Tech, Gradient, Soft Shadow, Micro-interaction] | [memberikan kesan profesional dan dipahami recruiter, ringan, modern dan bebearap animasi agar tampilan porfolio terasa hidup] |
 ```
 
