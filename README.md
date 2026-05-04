@@ -1,4 +1,4 @@
-# Portfolio Homework — KAreerr Elevation Vol. 2
+# Portfolio Homework Rizky Anugrah Septiawan — KAreerr Elevation Vol. 2
 
 ## Overview
 
@@ -81,7 +81,7 @@ Source: main / (root)
 Save
 ```
 
-**Live URL:** `https://[username].github.io/[repo]/`
+**Live URL:** `https://rizkyanugrah77.github.io/Rizky_Anugrah-portfolio/`
 
 Referensi: [Github Pages Tutorials](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
 
