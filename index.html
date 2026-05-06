@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rizky Anugrah Septiawan | IT Fresh Graduate Portfolio</title>
   <meta name="description"
-    content="Portfolio mobile-first Rizky Anugrah Septiawan, fresh graduate IT yang menargetkan startup dengan fokus web development modern." />
+    content="Mobile-first portfolio of Rizky Anugrah Septiawan, an IT fresh graduate targeting startups with a focus on modern web development." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
+    document.documentElement.dataset.theme = initialTheme;
+
     tailwind.config = {
       theme: {
         extend: {
@@ -37,7 +42,7 @@
   <div class="page-shell">
     <header class="sticky top-0 z-50 border-b border-white/40 bg-white/75 backdrop-blur-xl">
       <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8 xl:px-16"
-        aria-label="Navigasi utama">
+        aria-label="Main navigation">
         <a href="#hero" class="flex items-center gap-3">
           <span class=" text-sm font-semibold text-white"><img
               src="https://raw.githubusercontent.com/rizkyanugrah77/Rizky_Anugrah-portfolio/main/assets/img/my_poto.jpg"
@@ -49,20 +54,36 @@
           </span>
         </a>
 
-        <button id="menu-toggle"
-          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-ink transition hover:border-accent hover:text-accent md:hidden"
-          type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka navigasi">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
-          </svg>
-        </button>
+        <div class="flex items-center gap-3 md:gap-8">
+          <button id="theme-toggle"
+            class="theme-toggle inline-flex justify-center h-11 items-center gap-2 rounded-full border border-slate-200 px-4 text-sm font-medium text-ink transition hover:border-accent hover:text-accent"
+            type="button" aria-label="Switch theme" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path
+                  d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="theme-toggle__label sr-only">Dark</span>
+          </button>
 
-        <div class="hidden items-center gap-8 md:flex">
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#experience">Experience</a>
-          <a class="nav-link" href="#contact">Contact</a>
+          <button id="menu-toggle"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-ink transition hover:border-accent hover:text-accent md:hidden"
+            type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+            </svg>
+          </button>
+
+          <div class="hidden items-center gap-8 md:flex">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
         </div>
       </nav>
 
@@ -88,13 +109,8 @@
               Open to Work
             </span>
             <h1 class="max-w-3xl text-4xl font-bold leading-tight text-ink md:text-5xl xl:text-6xl">
-              Membangun produk web yang cepat, intuitif, dan siap berkembang
-            </h1>
-            <p class="mt-5 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
-              Perkenalkan, saya Rizky Anugrah Septiawan, seorang Web Developer dengan fokus pada pengembangan website
-              menggunakan framework Laravel. Saya juga memiliki pemahaman yang baik dalam konfigurasi jaringan,
-              perancangan sistem elektronik, serta pemodelan 3D menggunakan SketchUp.
-            </p>
+              Hi, I'm Rizky.
+              I build web experiences that feel smooth and alive. </h1>
 
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#projects"
@@ -112,7 +128,7 @@
               </div>
               <div class="rounded-2xl border border-slate-200 bg-white/80 px-4 py-5 shadow-sm">
                 <dt class="text-xs uppercase tracking-[0.24em] text-slate-500">Stack</dt>
-                <dd class="mt-2 text-sm font-semibold text-ink md:text-base">Laravel + JS</dd>
+                <dd class="mt-2 text-sm font-semibold text-ink md:text-base">Laravel</dd>
               </div>
               <div class="rounded-2xl border border-slate-200 bg-white/80 px-4 py-5 shadow-sm">
                 <dt class="text-xs uppercase tracking-[0.24em] text-slate-500">Goal</dt>
@@ -150,13 +166,6 @@
                 </div>
               </div>
 
-              <div class="mt-5 rounded-3xl border border-accent/20 bg-accentSoft/70 p-5">
-                <p class="text-xs uppercase tracking-[0.2em] text-accent">Highlight</p>
-                <p class="mt-3 text-sm leading-7 text-slate-700">
-                  Menyajikan profil, keahlian, dan potensi secara ringkas untuk memberikan gambaran cepat kepada
-                  recruiter.
-                </p>
-              </div>
             </article>
           </div>
         </div>
@@ -167,15 +176,17 @@
         <div class="mx-auto grid w-full max-w-7xl gap-8 px-5 md:px-8 xl:grid-cols-[.9fr_1.1fr] xl:px-16">
           <div>
             <p class="section-label">About</p>
-            <h2 class="section-title"> Tentang saya dan kontribusi yang saya bawa dalam pengembangan produk digital</h2>
+            <h2 class="section-title">About me and the value I bring to digital product development</h2>
           </div>
           <div class="grid gap-5">
             <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-sm leading-7 text-slate-600 md:text-base">
-                Saya merupakan fresh graduate di bidang IT yang berfokus pada pengembangan website yang tidak hanya
-                berfungsi dengan baik, tetapi juga memberikan pengalaman pengguna yang optimal. Saya terbiasa mengubah
-                kebutuhan menjadi tampilan yang rapi, responsif, dan memiliki alur informasi yang jelas.
-
+                I am Rizky Anugrah Septiawan, a Computer Systems graduate from STMIK Triguna Dharma and a freelance
+                web developer focused on building websites with Laravel.
+                I am used to creating applications that are functional, responsive, and deliver an optimal user
+                experience.
+                In addition, I have a basic understanding of network configuration and electronic systems that supports
+                the development of end-to-end technology solutions.
               </p>
             </article>
             <article class="grid gap-5 md:grid-cols-3">
@@ -197,122 +208,185 @@
       </section>
 
       <!-- Skills -->
+      <!-- Skills -->
       <section id="skills" class="section-spacing bg-white/70">
         <div class="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-16">
-          <p class="section-label">Skills</p>
-          <div class="mb-10 flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
-            <h2 class="section-title max-w-3xl"> Skills & Teknologi yang Saya Kuasai
-            </h2>
+          <p class="section-label">Tech Stack</p>
 
+          <div class="mb-10">
+            <h2 class="section-title max-w-3xl">
+              The tools I use, from rapid prototyping to production-scale system development.
+            </h2>
           </div>
 
-          <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
-            <article class="skill-card">
-              <span class="skill-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3Zm3.2 3 .9 10.7 3.9 1.2 3.9-1.2.3-3.6H9.8l-.2-2.5h6.8l.2-2.1H7.4L7.2 6Z" />
-                </svg>
-              </span>
-              <h3 class="skill-name">HTML</h3>
-              <p class="skill-meta">Semantic structure</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3Zm11.2 5.2H8l.2 2.4h6.8l-.4 4.6-2.6.8-2.7-.8-.2-2H6.8l.4 3.7 4.8 1.5 4.8-1.5.8-8.9Z" />
-                </svg>
-              </span>
-              <h3 class="skill-name">CSS</h3>
-              <p class="skill-meta">Responsive styling</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 3 3 7.5v9L12 21l9-4.5v-9L12 3Zm4.3 9.4c0 2.5-1.4 4.1-3.8 4.5-2 .3-3.5-.5-4.4-1.9l1.8-1.2c.4.7 1 1.1 1.9 1.1 1 0 1.7-.6 1.7-1.8V9.1h2.8v3.3Z" />
-                </svg>
-              </span>
-              <h3 class="skill-name">JavaScript</h3>
-              <p class="skill-meta">Interaction basics</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon"><span class="text-sm font-bold">B</span></span>
-              <h3 class="skill-name">Bootstrap</h3>
-              <p class="skill-meta">Fast prototyping</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon"><span class="text-sm font-bold">T</span></span>
-              <h3 class="skill-name">Tailwind CSS</h3>
-              <p class="skill-meta">Utility workflow</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon"><span class="text-sm font-bold">P</span></span>
-              <h3 class="skill-name">PHP</h3>
-              <p class="skill-meta">Server-side logic</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon"><span class="text-sm font-bold">L</span></span>
-              <h3 class="skill-name">Laravel</h3>
-              <p class="skill-meta">MVC application</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon"><span class="text-sm font-bold">M</span></span>
-              <h3 class="skill-name">MySQL</h3>
-              <p class="skill-meta">Relational database</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon"><span class="text-sm font-bold">API</span></span>
-              <h3 class="skill-name">RESTful APIs</h3>
-              <p class="skill-meta">Data integration</p>
-            </article>
-            <article class="skill-card">
-              <span class="skill-icon"><span class="text-sm font-bold">ERD</span></span>
-              <h3 class="skill-name">ERD</h3>
-              <p class="skill-meta">Database planning</p>
-            </article>
+          <!-- FRONTEND -->
+          <div class="mb-12">
+            <h3 class="mb-6 text-lg font-semibold text-slate-800">Frontend</h3>
+
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+              <article class="skill-card">
+                <span class="skill-icon">HTML</span>
+                <h3 class="skill-name">HTML</h3>
+                <p class="skill-meta">Semantic structure</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">CSS</span>
+                <h3 class="skill-name">CSS</h3>
+                <p class="skill-meta">Responsive styling</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">JS</span>
+                <h3 class="skill-name">JavaScript</h3>
+                <p class="skill-meta">Interactive UI</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">B</span>
+                <h3 class="skill-name">Bootstrap</h3>
+                <p class="skill-meta">Fast prototyping</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">TW</span>
+                <h3 class="skill-name">Tailwind CSS</h3>
+                <p class="skill-meta">Utility-first CSS</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">GSAP</span>
+                <h3 class="skill-name">GSAP</h3>
+                <p class="skill-meta">Animation library</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">A</span>
+                <h3 class="skill-name">Alpine.js</h3>
+                <p class="skill-meta">Lightweight interactivity</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- BACKEND -->
+          <div class="mb-12">
+            <h3 class="mb-6 text-lg font-semibold text-slate-800">Backend</h3>
+
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+              <article class="skill-card">
+                <span class="skill-icon">PHP</span>
+                <h3 class="skill-name">PHP</h3>
+                <p class="skill-meta">Server-side logic</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">L</span>
+                <h3 class="skill-name">Laravel</h3>
+                <p class="skill-meta">MVC framework</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">DB</span>
+                <h3 class="skill-name">MySQL</h3>
+                <p class="skill-meta">Relational database</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">API</span>
+                <h3 class="skill-name">RESTful APIs</h3>
+                <p class="skill-meta">Data integration</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">ERD</span>
+                <h3 class="skill-name">ERD</h3>
+                <p class="skill-meta">Database design</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- tools -->
+          <div>
+            <h3 class="mb-6 text-lg font-semibold text-slate-800">Tools</h3>
+
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+              <article class="skill-card">
+                <span class="skill-icon">Git</span>
+                <h3 class="skill-name">Git</h3>
+                <p class="skill-meta">Version control</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">DBD</span>
+                <h3 class="skill-name">dbdiagram</h3>
+                <p class="skill-meta">Database modeling</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">LC</span>
+                <h3 class="skill-name">Lucidchart</h3>
+                <p class="skill-meta">System design</p>
+              </article>
+
+              <article class="skill-card">
+                <span class="skill-icon">PM</span>
+                <h3 class="skill-name">Postman</h3>
+                <p class="skill-meta">API testing</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Projects -->
       <section id="projects" class="section-spacing">
-        <div class="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-16">
+        <div class="mx-auto w-full max-w-7xl px-5  md:px-8 xl:px-16">
           <div class="mb-10 flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
             <div>
               <p class="section-label">Projects</p>
-              <h2 class="section-title max-w-3xl">Beberapa project yang telah saya kerjakan
+              <h2 class="section-title max-w-3xl">Some of the projects I have worked on
               </h2>
             </div>
-            <!-- <p class="max-w-xl text-sm leading-7 text-slate-600 md:text-base">
-                Setiap card memadukan thumbnail, stack, konteks singkat, dan CTA yang jelas supaya reviewer bisa
-                langsung pindah ke demo atau repository.
-              </p> -->
+
           </div>
 
-          <div class="grid gap-6 xl:grid-cols-3">
+          <div class="grid gap-6 py-3 xl:grid-cols-3">
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb">
-                <div class="project-glow"></div>
-                <div class="project-frame">
-                  <span class="project-badge">Web Undangan Digital</span>
-                  <h3 class="mt-8 text-xl font-semibold text-white">Wayae Nikah</h3>
-                  <p class="mt-3 max-w-xs text-sm leading-6 text-white/80">
-                    Platform undangan pernikahan digital yang modern dan responsif.
+              <div class="project-thumb relative" style="background-image: url('/assets/img/Wayaenikah.png'); 
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;">
+
+                <!-- Gradient overlay for better text readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+
+                <div class="project-frame relative z-10 p-6">
+                  <span class="project-badge">
+                    Digital Invitation Website
+                  </span>
+
+                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
+                    Wayae Nikah
+                  </h3>
+
+                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
+                    A modern and responsive digital wedding invitation platform.
                   </p>
                 </div>
               </div>
+
               <div class="p-6">
                 <div class="mb-4 flex flex-wrap gap-2">
                   <span class="stack-tag">Laravel</span>
-                  <span class="stack-tag">MySQL</span>
+                  <span class="stack-tag">Livewire</span>
                   <span class="stack-tag">Tailwind CSS</span>
                 </div>
+
                 <p class="text-sm leading-7 text-slate-600">
-                  Solusi undangan pernikahan digital yang elegan dan praktis, dengan fitur RSVP, galeri, dan pembayaran
-                  online untuk pengalaman acara yang lebih mudah dan berkesan.
+                  An elegant and practical digital wedding invitation solution with RSVP, gallery, and online payment
+                  features for a smoother and more memorable event experience.
                 </p>
+
                 <div class="mt-6 flex gap-3">
                   <a href="https://wayaenikah.com/" target="_blank" class="button-primary">Live Demo</a>
                   <a href="https://github.com/rizkyanugrah77/undangan-digital" target="_blank"
@@ -322,64 +396,219 @@
             </article>
 
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb thumb-cyan">
-                <div class="project-glow"></div>
-                <div class="project-frame">
-                  <span class="project-badge">Platform Web Tiket Konser</span>
-                  <h3 class="mt-8 text-xl font-semibold text-white">Gotik</h3>
-                  <p class="mt-3 max-w-xs text-sm leading-6 text-white/80">
-                    Platform pemesanan tiket konser berbasis web dengan sistem booking online.
+              <div class="project-thumb relative" style="background-image: url('/assets/img/go-tik.png'); 
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;">
+
+                <!-- Gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+
+                <div class="project-frame relative z-10 p-6">
+                  <span class="project-badge">
+                    Concert Ticketing Web Platform
+                  </span>
+
+                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
+                    Gotik
+                  </h3>
+
+                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
+                    A web-based concert ticket booking platform with an online reservation system.
                   </p>
                 </div>
               </div>
+
               <div class="p-6">
                 <div class="mb-4 flex flex-wrap gap-2">
                   <span class="stack-tag">Laravel</span>
                   <span class="stack-tag">Bootstrap</span>
                   <span class="stack-tag">JavaScript</span>
                 </div>
+
                 <p class="text-sm leading-7 text-slate-600">
-                  Solusi tiket konser digital dengan pengalaman booking yang seamless, didukung tampilan modern dan
-                  sistem pembayaran terintegrasi.
+                  A digital concert ticketing solution with a seamless booking experience, supported by a modern
+                  interface and an integrated payment system.
                 </p>
+
                 <div class="mt-6 flex gap-3">
                   <a href="https://go-tik.com/" target="_blank" class="button-primary">Live Demo</a>
-                  <a href="https://github.com/rizkyanugrah77/ticket" target="_blank" class="button-secondary">Source
-                    Code</a>
+                  <a href="https://github.com/rizkyanugrah77/ticket" target="_blank" class="button-secondary">
+                    Source Code
+                  </a>
                 </div>
               </div>
             </article>
 
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb thumb-teal">
-                <div class="project-glow"></div>
-                <div class="project-frame">
-                  <span class="project-badge">Sistem Monitoring Kualitas Air Berbasis IoT</span>
-                  <h3 class="mt-8 text-xl font-semibold text-white">Dashboard Monitoring Kualitas Air</h3>
-                  <p class="mt-3 max-w-xs text-sm leading-6 text-white/80">
-                    Sistem monitoring kualitas air berbasis IoT yang menampilkan data sensor secara realtime.
+              <div class="project-thumb relative" style="background-image: url('/assets/img/suhu.jpg'); 
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;">
+
+                <!-- Gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+
+                <div class="project-frame relative z-10 p-6">
+
+                  <!-- Improved badge -->
+                  <span
+                    class="project-badge inline-block max-w-[220px] leading-snug">
+                    IoT-Based Water Quality Monitoring System
+                  </span>
+
+                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
+                    Water Quality Monitoring Dashboard
+                  </h3>
+
+                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
+                    An IoT-based water quality monitoring system that displays sensor data in real time.
                   </p>
                 </div>
               </div>
+
               <div class="p-6">
                 <div class="mb-4 flex flex-wrap gap-2">
                   <span class="stack-tag">Laravel</span>
                   <span class="stack-tag">IoT</span>
-                  <span class="stack-tag">ESP 8266</span>
+                  <span class="stack-tag">ESP8266</span>
                 </div>
+
                 <p class="text-sm leading-7 text-slate-600">
-                  Dikembangkan dengan arsitektur berbasis REST API untuk pengolahan data sensor, serta perancangan
-                  database yang terstruktur guna memastikan akurasi, dan visualisasi data secara realtime.
+                  Built with a REST API-based architecture for sensor data processing, along with a structured database
+                  design to ensure accurate real-time data visualization.
                 </p>
+
                 <div class="mt-6 flex gap-3">
+                  <!-- Optional if you want to enable it later -->
                   <!-- <a href="#" class="button-primary">Live Demo</a> -->
+
                   <a href="https://github.com/rizkyanugrah77/Monitoring-Kualitas-Air" target="_blank"
-                    class="button-secondary">Source
-                    Code</a>
+                    class="button-secondary">
+                    Source Code
+                  </a>
                 </div>
               </div>
             </article>
           </div>
+
+          <div class="grid gap-6 py-3 xl:grid-cols-3">
+            <article class="project-card group" data-spotlight>
+              <div class="project-thumb relative">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+
+                <div class="project-frame relative z-10 p-6">
+                  <span class="project-badge">
+                    Travel Web Platform
+                  </span>
+
+                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
+                    Nomads
+                  </h3>
+
+                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
+                    A modern and responsive travel booking platform for exploring destinations with ease.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <div class="mb-4 flex flex-wrap gap-2">
+                  <span class="stack-tag">Laravel</span>
+                  <span class="stack-tag">MySQL</span>
+                  <span class="stack-tag">Bootstrap</span>
+                </div>
+
+                <p class="text-sm leading-7 text-slate-600">
+                  A travel booking solution with destination search, tour package booking, online payments, and trip
+                  management for an easier vacation experience.
+                </p>
+
+                <div class="mt-6 flex gap-3">
+                  <a href="#" class="button-secondary">Source Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card group" data-spotlight>
+              <div class="project-thumb relative thumb-cyan">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+
+                <div class="project-frame relative z-10 p-6">
+                  <span class="project-badge">
+                    Air Quality Monitoring
+                  </span>
+
+                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
+                    Air Quality Dashboard
+                  </h3>
+
+                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
+                    A web-based dashboard for monitoring air quality in real time with interactive visualizations.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <div class="mb-4 flex flex-wrap gap-2">
+                  <span class="stack-tag">Laravel</span>
+                  <span class="stack-tag">IoT</span>
+                  <span class="stack-tag">Arduino</span>
+                </div>
+
+                <p class="text-sm leading-7 text-slate-600">
+                  A monitoring system with real-time PM2.5, temperature, and humidity data, complete with interactive
+                  charts and dangerous condition alerts.
+                </p>
+
+                <div class="mt-6 flex gap-3">
+                  <a href="#" class="button-secondary">Source Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card group" data-spotlight>
+              <div class="project-thumb relative thumb-teal">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+
+                <div class="project-frame relative z-10 p-6">
+      <span class="project-badge">
+        Landing Page E-Commerce
+      </span>
+
+                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
+                    Luxpaces
+                  </h3>
+
+                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
+                    A modern landing page designed to showcase products attractively and increase conversions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <div class="mb-4 flex flex-wrap gap-2">
+                  <span class="stack-tag">Tailwind CSS</span>
+                  <span class="stack-tag">Alpine JS</span>
+                  <span class="stack-tag">JavaScript</span>
+                </div>
+
+                <p class="text-sm leading-7 text-slate-600">
+                  Focused on user experience and conversion through product catalog features, promotional highlights,
+                  and
+                  performance optimization for fast loading.
+                </p>
+
+                <div class="mt-6 flex gap-3">
+                  <a href="#" class="button-secondary">Source Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
         </div>
       </section>
 
@@ -398,21 +627,22 @@
               <p class="text-sm font-medium text-accent">2026</p>
               <h3 class="mt-3 text-xl font-semibold">Portfolio & personal branding</h3>
               <p class="mt-3 text-sm leading-7 text-slate-600">
-                Menyusun portfolio yang fokus pada positioning untuk recruiter startup, bukan hanya dokumentasi tugas.
+                Building a portfolio focused on positioning for startup recruiters, not just documenting assignments.
               </p>
             </article>
             <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-sm font-medium text-accent">Learning Track</p>
               <h3 class="mt-3 text-xl font-semibold">Web development practice</h3>
               <p class="mt-3 text-sm leading-7 text-slate-600">
-                Membangun latihan front-end, back-end dasar, dan integrasi data untuk memperkuat fondasi praktis
+                Building front-end practice projects, core back-end skills, and data integration to strengthen my
+                practical foundation.
               </p>
             </article>
             <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-sm font-medium text-accent">Next Goal</p>
               <h3 class="mt-3 text-xl font-semibold">Join a product-driven team</h3>
               <p class="mt-3 text-sm leading-7 text-slate-600">
-                Mencari lingkungan kerja yang cepat, kolaboratif, dan memberi ruang belajar sambil shipping produk.
+                Looking for a fast-paced, collaborative environment that provides room to learn while shipping products.
               </p>
             </article>
           </div>
@@ -427,12 +657,12 @@
             <!-- LEFT: TEXT -->
             <div>
               <p class="section-label">Contact</p>
-              <h2 class="section-title max-w-2xl text-white">
-                Mari bangun produk digital yang rapi, fungsional, dan siap berkembang
+              <h2 class="section-title max-w-2xl text-white" style="color: rgb(169, 167, 167)  !important;">
+                Let's build digital products that are polished, functional, and ready to grow
               </h2>
               <p class="mt-5 max-w-xl text-sm leading-7 text-white/75 md:text-base">
-                Saya terbuka untuk peluang kerja, kolaborasi, maupun pengembangan proyek digital.
-                Silakan hubungi saya melalui form atau platform berikut.
+                I am open to job opportunities, collaborations, and digital product development projects.
+                Feel free to reach out through the form or the platforms below.
               </p>
 
               <div class="mt-6 grid gap-4 sm:grid-cols-2">
@@ -458,11 +688,11 @@
             <!-- RIGHT: FORM -->
             <form onsubmit="sendToWhatsApp(event)"
               class="bg-white rounded-2xl p-6 shadow-md space-y-4 align-items-center">
-              <h3 class="text-lg font-semibold text-slate-800">Kirim Pesan</h3>
+              <h3 class="text-lg font-semibold text-slate-800">Send a Message</h3>
 
               <div>
-                <label class="text-sm text-slate-600">Nama</label>
-                <input id="nama" type="text" placeholder="Nama Anda"
+                <label class="text-sm text-slate-600">Name</label>
+                <input id="nama" type="text" placeholder="Your name"
                   class="w-full mt-1 px-4 py-2 rounded-lg border border-slate-300">
               </div>
 
@@ -473,14 +703,14 @@
               </div>
 
               <div>
-                <label class="text-sm text-slate-600">Pesan</label>
-                <textarea id="pesan" rows="4" placeholder="Tulis pesan Anda..."
+                <label class="text-sm text-slate-600">Message</label>
+                <textarea id="pesan" rows="4" placeholder="Write your message..."
                   class="w-full mt-1 px-4 py-2 rounded-lg border border-slate-300"></textarea>
               </div>
 
               <button type="submit"
                 class="w-full bg-accent text-white py-2 rounded-lg font-medium hover:opacity-90 transition">
-                Kirim via WhatsApp
+                Send via WhatsApp
               </button>
             </form>
           </div>
@@ -491,7 +721,7 @@
     <footer class="border-t border-slate-200 bg-white">
       <div
         class="mx-auto flex w-full max-w-7xl flex-col gap-4 px-5 py-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between md:px-8 xl:px-16">
-        <p>&copy; <span id="year"></span> Rizky Anugrah Septiawan. Crafted for startup recruiters.</p>
+        <p>&copy; <span id="year"></span> Rizky Anugrah Septiawan.</p>
         <div class="flex gap-5">
           <a class="footer-link" href="#about">About</a>
           <a class="footer-link" href="#projects">Projects</a>
@@ -503,17 +733,47 @@
 
   <script>
     const menuToggle = document.getElementById("menu-toggle");
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeToggleIcon = themeToggle.querySelector(".theme-toggle__icon");
+    const themeToggleLabel = themeToggle.querySelector(".theme-toggle__label");
     const mobileMenu = document.getElementById("mobile-menu");
     const mobileLinks = document.querySelectorAll(".mobile-link");
     const year = document.getElementById("year");
     const spotlightCards = document.querySelectorAll("[data-spotlight]");
 
+    const applyTheme = (theme) => {
+      const isDark = theme === "dark";
+      document.documentElement.dataset.theme = theme;
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+      themeToggleIcon.innerHTML = isDark
+        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"
+              stroke-linecap="round" />
+          </svg>`
+        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path
+              d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>`;
+      themeToggleLabel.textContent = isDark ? "Light" : "Dark";
+      localStorage.setItem("theme", theme);
+    };
+
     year.textContent = new Date().getFullYear();
+    applyTheme(document.documentElement.dataset.theme || "light");
 
     menuToggle.addEventListener("click", () => {
       const expanded = menuToggle.getAttribute("aria-expanded") === "true";
       menuToggle.setAttribute("aria-expanded", String(!expanded));
       mobileMenu.classList.toggle("hidden");
+    });
+
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
     });
 
     mobileLinks.forEach((link) => {
@@ -541,9 +801,9 @@
       const email = document.getElementById("email").value;
       const pesan = document.getElementById("pesan").value;
 
-      const noHP = "6282162008433"; // GANTI dengan nomor kamu (pakai 62, tanpa 0)
+      const noHP = "6282162008433"; // REPLACE with your number (use 62, without 0)
 
-      const text = `Halo, saya ${nama}%0AEmail: ${email}%0APesan: ${pesan}`;
+      const text = `Hello, I am ${nama}%0AEmail: ${email}%0AMessage: ${pesan}`;
 
       const url = `https://wa.me/${noHP}?text=${text}`;
 
