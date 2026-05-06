@@ -1,137 +1,84 @@
-# Portfolio Homework Rizky Anugrah Septiawan — KAreerr Elevation Vol. 2
+# Rizky Anugrah Septiawan Portfolio
+
+A mobile-first personal portfolio website for Rizky Anugrah Septiawan, an IT fresh graduate and freelance web developer focused on modern web development with Laravel.
 
 ## Overview
 
-**Tugas:** Buat portfolio website dengan workflow **Plan-First + RTCC-O**
+This project showcases Rizky's profile, skills, selected projects, learning journey, and contact information in a clean, responsive landing page. The interface includes light and dark theme support, interactive project cards, and a WhatsApp contact form.
 
-**Output:** Portfolio live di GitHub Pages + dokumentasi process
+## Live Sections
 
-**Key Principle:**
-> ⚠️ **"Raw AI output you don't understand = AUTO-FAIL"**
+- `Hero`: Short introduction, current focus, stack, and career goal
+- `About`: Background, strengths, and work style
+- `Skills`: Frontend, backend, and tools used in day-to-day work
+- `Projects`: Featured web and IoT-related projects
+- `Experience`: Learning journey and career direction
+- `Contact`: Direct contact links and WhatsApp message form
 
----
+## Features
 
-## Submission: GitHub Repository
+- Responsive portfolio layout
+- Sticky navigation with mobile menu
+- Light and dark theme toggle with saved preference
+- Interactive spotlight effect on project cards
+- WhatsApp contact form integration
+- Clean semantic HTML structure
 
-```
-YOUR REPO STRUCTURE:
-├── README.md          # Project overview
-├── index.html         # Portfolio website
-├── style.css          # Portfolio styles
-├── assets/            # Screenshots + images
-│   ├── desktop-view.png
-│   └── mobile-view.png
-└── plan/              # Process documentation
-    ├── 01-brainstorm.md
-    ├── 02-details.md
-    ├── 03-execution.md
-    └── 04-results.md
-```
+## Tech Stack
 
----
+### Frontend
 
-## Langkah
+- HTML5
+- CSS3
+- JavaScript
+- Tailwind CSS
+- Bootstrap
+- Alpine.js
+- GSAP
 
-### 1. Buat Repository
+### Backend Knowledge
 
-```
-1. github.com → New repository
-2. Name: [nama]-portfolio
-3. ✅ Add README
-4. Create
-```
+- PHP
+- Laravel
+- MySQL
+- RESTful APIs
+- ERD / database design
 
-### 2. Clone ke Local
+### Tools
 
-```bash
-git clone https://github.com/[username]/[repo].git
-cd [repo]
-```
+- Git
+- dbdiagram
+- Lucidchart
+- Postman
 
-### 3. Buat Folder Structure
 
-```bash
-mkdir plan assets
-```
 
-### 4. Buat Portfolio + Dokumentasi
+## Contact
 
-```
-📋 plan/01-brainstorm.md    → Brainstorm dengan AI
-📋 plan/02-details.md       → Project details (RTCC-O)
-📋 plan/03-execution.md     → Step-by-step execution
-📋 plan/04-results.md       → Final screenshots + reflection
-📋 index.html, style.css    → Portfolio website
-📋 assets/                  → Screenshots
-```
+- Email: `rizkyseptiawan330@gmail.com`
+- GitHub: `https://github.com/rizkyanugrah77`
+- LinkedIn: `https://www.linkedin.com/in/rizky-anugrah-9637b028b/`
+- Instagram: `https://www.instagram.com/rizky_anugrah77/`
 
-### 5. Push ke GitHub
+## Project Structure
 
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
+```text
+.
+|-- README.md
+|-- index.html
+|-- style.css
+|-- assets/
+`-- plan/
 ```
 
-### 6. Enable GitHub Pages
+## Run Locally
 
-```
-Repository → Settings → Pages
-Source: main / (root)
-Save
-```
+1. Clone this repository.
+2. Open the project folder.
+3. Run `index.html` in your browser.
 
-**Live URL:** `https://rizkyanugrah77.github.io/Rizky_Anugrah-portfolio/`
+## Notes
 
-Referensi: [Github Pages Tutorials](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
-
----
-
-## Technical Requirements
-
-### Must-Have:
-- ✅ Semantic HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)
-- ✅ Responsive CSS (mobile-first)
-- ✅ All code bisa dijelaskan ke recruiter
-
----
-
-## RTCC-O Framework
-
-| Component | Fungsi |
-|-----------|--------|
-| **R**ole | Siapa AI dalam konteks ini? |
-| **T**ask | Apa yang harus dikerjakan? |
-| **C**ontext | Tech stack, existing code |
-| **C**onstraints | Yang TIDAK boleh / WAJIB |
-| **O**utput | Format hasil yang diinginkan |
-
-See: `plan/02-details.md`
-
----
-
-## Evaluation
-
-| Component | Weight |
-|-----------|--------|
-| Brainstorm | 20% |
-| Project Details | 15% |
-| Execution | 40% |
-| Final Results | 25% |
-
----
-
-## Resources
-
-| Resource | URL |
-|----------|-----|
-| ChatGPT | chat.openai.com |
-| Claude | claude.ai |
-| GitHub Desktop | desktop.github.com |
-| GitHub Pages Docs | docs.github.com/en/pages |
-
----
-
-**Deadline:** [05/05/2026]
-
-**Submit:** GitHub Repository URL + GitHub Pages URL
+- Theme preference is stored in `localStorage`.
+- The contact form opens WhatsApp with a prefilled message.
+- This project is designed as a portfolio landing page, not a multi-page web app.

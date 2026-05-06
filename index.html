@@ -60,10 +60,7 @@
             type="button" aria-label="Switch theme" aria-pressed="false">
             <span class="theme-toggle__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path
-                  d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             <span class="theme-toggle__label sr-only">Dark</span>
@@ -352,7 +349,7 @@
 
           <div class="grid gap-6 py-3 xl:grid-cols-3">
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative" style="background-image: url('/assets/img/Wayaenikah.png'); 
+              <div class="project-thumb relative" style="background-image: url('https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio/blob/main/assets/img/Wayaenikah.png'); 
               background-size: cover; 
               background-position: center; 
               background-repeat: no-repeat;">
@@ -396,7 +393,7 @@
             </article>
 
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative" style="background-image: url('/assets/img/go-tik.png'); 
+              <div class="project-thumb relative thumb-cyan" style="background-image: url('https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio/blob/main/assets/img/go-tik.png'); 
               background-size: cover; 
               background-position: center; 
               background-repeat: no-repeat;">
@@ -441,7 +438,7 @@
             </article>
 
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative" style="background-image: url('/assets/img/suhu.jpg'); 
+              <div class="project-thumb relative thumb-teal" style="background-image: url('https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio/blob/main/assets/img/suhu.jpg'); 
               background-size: cover; 
               background-position: center; 
               background-repeat: no-repeat;">
@@ -452,8 +449,7 @@
                 <div class="project-frame relative z-10 p-6">
 
                   <!-- Improved badge -->
-                  <span
-                    class="project-badge inline-block max-w-[220px] leading-snug">
+                  <span class="project-badge inline-block max-w-[220px] leading-snug">
                     IoT-Based Water Quality Monitoring System
                   </span>
 
@@ -494,7 +490,7 @@
 
           <div class="grid gap-6 py-3 xl:grid-cols-3">
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative">
+              <div class="project-thumb relative ">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
 
@@ -526,7 +522,7 @@
                 </p>
 
                 <div class="mt-6 flex gap-3">
-                  <a href="#" class="button-secondary">Source Code</a>
+                  <a href="https://github.com/rizkyanugrah77/Nomads" target="_blank" class="button-secondary">Source Code</a>
                 </div>
               </div>
             </article>
@@ -564,7 +560,7 @@
                 </p>
 
                 <div class="mt-6 flex gap-3">
-                  <a href="#" class="button-secondary">Source Code</a>
+                  <a href="https://github.com/rizkyanugrah77/Monitoring-Kualitas-Air" target="_blank" class="button-secondary">Source Code</a>
                 </div>
               </div>
             </article>
@@ -575,9 +571,9 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
 
                 <div class="project-frame relative z-10 p-6">
-      <span class="project-badge">
-        Landing Page E-Commerce
-      </span>
+                  <span class="project-badge">
+                    Landing Page E-Commerce
+                  </span>
 
                   <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
                     Luxpaces
@@ -603,7 +599,7 @@
                 </p>
 
                 <div class="mt-6 flex gap-3">
-                  <a href="#" class="button-secondary">Source Code</a>
+                  <a href="https://github.com/rizkyanugrah77/luxspace" target="_blank" class="button-secondary">Source Code</a>
                 </div>
               </div>
             </article>
@@ -746,13 +742,13 @@
       document.documentElement.dataset.theme = theme;
       themeToggle.setAttribute("aria-pressed", String(isDark));
       themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
-      themeToggleIcon.innerHTML = isDark
-        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      themeToggleIcon.innerHTML = isDark ?
+        `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <circle cx="12" cy="12" r="4" />
             <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"
               stroke-linecap="round" />
-          </svg>`
-        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          </svg>` :
+        `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path
               d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
               stroke-linecap="round"
