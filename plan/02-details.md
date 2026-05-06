@@ -10,7 +10,7 @@ Siapa AI dalam konteks ini?
 
 ## Jawaban
 [ 
-    Sebagai asisten saya (developer) dalam membangun website portfolio dengan tech semantik HTML, CSS, dan Tailwind CSS
+    Sebagai asisten saya (developer) dalam membangun website portfolio dengan tech semantik HTML, CSS, dan tambahan Tailwind CSS
 ]
 
 ## T — Task
@@ -18,7 +18,7 @@ Apa tugas utama project ini?
 
 ## Jawaban
 [
-    Tugas utama dalam project ini yaitu membuat website portfolio fresh graduate IT dengan bantuan ai untuk membangun website
+    Tugas utama dalam project ini yaitu membuat website portfolio fresh graduate IT dengan bantuan ai untuk membangun website portfolio.
 ]
 
 
@@ -32,8 +32,8 @@ Tech stack, constraints, standards:
 ## Jawaban
 [
 -Tech: HTML5, CSS3, TailwindCSS, Javascript
--Approach: Mobile & PC
-- Audience:  Tech Lead
+-Approach: Mobile, Tablet & Desktop
+- Audience:  Recruiter HR
 ]
 
 
@@ -66,10 +66,9 @@ Format yang diinginkan:
 
 ## Jawaban
 [
--Wireframe deskripsi (bukan gambar)
--UI guideline
--Tailwind class suggestion (opsional)
--UX reasoning (kenapa desain ini efektif untuk startup hiring)
+-HTML + CSS embedded / terpisah
+-HANYA kode / comment diatas section
+-tambahan tailwind css 
 ]
 
 

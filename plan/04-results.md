@@ -7,21 +7,21 @@
 
 ## Portfolio Info
 - **Nama:** [Rizky Anugrah Septiawan]
-- **Repository:** [https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio]
-- **Live URL:** [https://rizkyanugrah77.github.io/Rizky_Anugrah-portfolio/]
+- **Repository:** [
+https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio ]
+- **Live URL:** [
+https://rizkyanugrah77.github.io/Rizky_Anugrah-portfolio/ ]
 - **Date:** [05 Mei 2026]
 
 ---
 
 ## Screenshot: Desktop
-
-[assets/Screenshot-Desktop.png]
+  [ https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio/blob/main/assets/img/Screenshot-Desktop.png ]
 
 ---
 
 ## Screenshot: Mobile
-
-[assets/Screenshot-Mobile.png]
+[ https://github.com/rizkyanugrah77/Rizky_Anugrah-portfolio/blob/main/assets/img/Screenshot-Mobile.png ]
 
 ---
 
@@ -54,7 +54,7 @@ Output:
 2. Typography recommendation
 3. Section structure
 4. 1 unique element]
-How I Solved: [Saya membuat ulang pengertian tata cara membuat prompt yg baik dari ai]
+How I Solved: [ Saya menganalisis ulang soal challenge dari ai dan membuat ulang pengertian tata cara membuat prompt yg terstruktur dari ai lalu dieksekusi di vscode dengan codex/chatgpt]
 
 Challenge 2: [Deskripsi]
 How I Solved: [Solution]

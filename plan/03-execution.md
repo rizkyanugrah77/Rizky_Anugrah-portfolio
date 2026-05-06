@@ -27,7 +27,7 @@ SETIAP STEP:
 ## Template
 
 ```markdown
-# Execution — [CODEX]
+# Execution — [VSCode/CODEX]
 
 ## Step 1: [Rancang portfolio mobile-first]
 
@@ -424,6 +424,7 @@ Kalau kamu mau, langkah berikutnya saya bisa langsung ubahkan arahan ini menjadi
 
 ## Step 2: [buat langkah berikutnya]
 
+### AI Response
 [Langkah berikutnya sudah saya buat langsung di index.html dan style.css. Halamannya sekarang sudah punya struktur semantic HTML5, layout mobile-first dengan Tailwind CDN, palette Black Standout sebagai default, section Hero, About, Skills, Projects, Experience, Contact, dan Footer, plus micro-interaction spotlight hover di project card untuk memberi kesan modern tanpa mengganggu readability.
 
 Di CSS, saya tambahkan UI guideline yang konsisten: spacing section untuk 480px, 728px, dan 1440px, styling card, nav, CTA, contact panel, serta animasi ringan pada hero dan hover state. Efek uniknya ada di project card: glow mengikuti pointer untuk membantu recruiter lebih fokus ke karya utama, yang secara UX memperkuat area paling penting di portfolio.
