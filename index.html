@@ -43,16 +43,19 @@
     <header class="sticky top-0 z-50 border-b border-white/40 bg-white/75 backdrop-blur-xl">
       <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8 xl:px-16"
         aria-label="Main navigation">
-        <a href="#hero" class="flex items-center gap-3">
-          <span class=" text-sm font-semibold text-white"><img
-              src="https://raw.githubusercontent.com/rizkyanugrah77/Rizky_Anugrah-portfolio/main/assets/img/my_poto.jpg"
-              alt=""
-              class="flex h-11 w-11 items-center justify-center rounded-2xl border  border-[3px] border-black"></span>
-          <span class="leading-tight">
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="openModal()" aria-controls="imageModal" aria-label="Open profile photo"
+            class="rounded-2xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
+            <img src="assets/img/my-2.jpeg" alt="Profile"
+              class="h-14 w-14 rounded-2xl object-cover border-[3px] border-black shadow-md cursor-pointer transition hover:scale-105"
+              loading="lazy" />
+          </button>
+
+          <a href="#hero" class="leading-tight">
             <span class="block text-sm font-semibold">Rizky Anugrah</span>
             <span class="block text-xs text-slate-500">Web Developer</span>
-          </span>
-        </a>
+          </a>
+        </div>
 
         <div class="flex items-center gap-3 md:gap-8">
           <button id="theme-toggle"
@@ -220,45 +223,38 @@
           <div class="mb-12">
             <h3 class="mb-6 text-lg font-semibold text-slate-800">Frontend</h3>
 
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+            <div class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5">
               <article class="skill-card">
-                <span class="skill-icon">HTML</span>
                 <h3 class="skill-name">HTML</h3>
                 <p class="skill-meta">Semantic structure</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">CSS</span>
                 <h3 class="skill-name">CSS</h3>
                 <p class="skill-meta">Responsive styling</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">JS</span>
                 <h3 class="skill-name">JavaScript</h3>
                 <p class="skill-meta">Interactive UI</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">B</span>
                 <h3 class="skill-name">Bootstrap</h3>
                 <p class="skill-meta">Fast prototyping</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">TW</span>
                 <h3 class="skill-name">Tailwind CSS</h3>
                 <p class="skill-meta">Utility-first CSS</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">GSAP</span>
                 <h3 class="skill-name">GSAP</h3>
                 <p class="skill-meta">Animation library</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">A</span>
                 <h3 class="skill-name">Alpine.js</h3>
                 <p class="skill-meta">Lightweight interactivity</p>
               </article>
@@ -271,31 +267,26 @@
 
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
               <article class="skill-card">
-                <span class="skill-icon">PHP</span>
                 <h3 class="skill-name">PHP</h3>
                 <p class="skill-meta">Server-side logic</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">L</span>
                 <h3 class="skill-name">Laravel</h3>
                 <p class="skill-meta">MVC framework</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">DB</span>
                 <h3 class="skill-name">MySQL</h3>
                 <p class="skill-meta">Relational database</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">API</span>
                 <h3 class="skill-name">RESTful APIs</h3>
                 <p class="skill-meta">Data integration</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">ERD</span>
                 <h3 class="skill-name">ERD</h3>
                 <p class="skill-meta">Database design</p>
               </article>
@@ -308,27 +299,33 @@
 
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
               <article class="skill-card">
-                <span class="skill-icon">Git</span>
                 <h3 class="skill-name">Git</h3>
                 <p class="skill-meta">Version control</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">DBD</span>
                 <h3 class="skill-name">dbdiagram</h3>
                 <p class="skill-meta">Database modeling</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">LC</span>
                 <h3 class="skill-name">Lucidchart</h3>
                 <p class="skill-meta">System design</p>
               </article>
 
               <article class="skill-card">
-                <span class="skill-icon">PM</span>
                 <h3 class="skill-name">Postman</h3>
                 <p class="skill-meta">API testing</p>
+              </article>
+
+                <article class="skill-card">
+                <h3 class="skill-name">Sketch Up</h3>
+                <p class="skill-meta">3D design</p>
+              </article>
+
+                <article class="skill-card">
+                <h3 class="skill-name">Proteus 8 professional</h3>
+                <p class="skill-meta">Designed circuit schematics</p>
               </article>
             </div>
           </div>
@@ -516,7 +513,8 @@
                 </p>
 
                 <div class="mt-6 flex gap-3">
-                  <a href="https://github.com/rizkyanugrah77/Nomads" target="_blank" class="button-secondary">Source Code</a>
+                  <a href="https://github.com/rizkyanugrah77/Nomads" target="_blank" class="button-secondary">Source
+                    Code</a>
                 </div>
               </div>
             </article>
@@ -554,7 +552,8 @@
                 </p>
 
                 <div class="mt-6 flex gap-3">
-                  <a href="https://github.com/rizkyanugrah77/Monitoring-Kualitas-Air" target="_blank" class="button-secondary">Source Code</a>
+                  <a href="https://github.com/rizkyanugrah77/Monitoring-Kualitas-Air" target="_blank"
+                    class="button-secondary">Source Code</a>
                 </div>
               </div>
             </article>
@@ -593,7 +592,8 @@
                 </p>
 
                 <div class="mt-6 flex gap-3">
-                  <a href="https://github.com/rizkyanugrah77/luxspace" target="_blank" class="button-secondary">Source Code</a>
+                  <a href="https://github.com/rizkyanugrah77/luxspace" target="_blank" class="button-secondary">Source
+                    Code</a>
                 </div>
               </div>
             </article>
@@ -721,6 +721,18 @@
     </footer>
   </div>
 
+  <div id="imageModal" aria-hidden="true" aria-label="Profile photo preview"
+    class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">
+    <div class="relative inline-flex items-center justify-center" onclick="event.stopPropagation()">
+      <button type="button" onclick="closeModal()" aria-label="Close profile photo preview"
+        class="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white text-base font-bold text-black shadow-lg transition hover:scale-105">
+        &times;
+      </button>
+
+      <img src="assets/img/my-2.jpeg" alt="Profile Large" class="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl" />
+    </div>
+  </div>
+
   <script>
     const menuToggle = document.getElementById("menu-toggle");
     const themeToggle = document.getElementById("theme-toggle");
@@ -799,6 +811,33 @@
 
       window.open(url, "_blank");
     }
+    const imageModal = document.getElementById("imageModal");
+
+    function openModal() {
+      imageModal.classList.remove("hidden");
+      imageModal.classList.add("flex");
+      imageModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeModal() {
+      imageModal.classList.add("hidden");
+      imageModal.classList.remove("flex");
+      imageModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    imageModal.addEventListener("click", function (event) {
+      if (event.target === imageModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && imageModal.classList.contains("flex")) {
+        closeModal();
+      }
+    });
   </script>
 </body>
 
