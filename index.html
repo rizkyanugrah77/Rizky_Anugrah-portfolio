@@ -47,7 +47,7 @@
           <button type="button" onclick="openModal()" aria-controls="imageModal" aria-label="Open profile photo"
             class="rounded-2xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
             <img src="assets/img/my-2.jpeg" alt="Profile"
-              class="h-14 w-14 rounded-2xl object-cover border-[3px] border-black shadow-md cursor-pointer transition hover:scale-105"
+              class="h-12 w-12 rounded-2xl object-cover border-[3px] border-black shadow-md cursor-pointer transition hover:scale-105"
               loading="lazy" />
           </button>
 
@@ -481,7 +481,8 @@
 
           <div class="grid gap-6 py-3 xl:grid-cols-3">
             <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative ">
+             <div class="project-thumb relative thumb-teal"
+                style="background-image: url('assets/img/nomads.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
 
@@ -764,7 +765,7 @@
       localStorage.setItem("theme", theme);
     };
 
-    year.textContent = new Date().getFullYear();
+    year.textContent = 2024;
     applyTheme(document.documentElement.dataset.theme || "light");
 
     menuToggle.addEventListener("click", () => {
