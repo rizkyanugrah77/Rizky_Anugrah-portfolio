@@ -2,1092 +2,295 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rizky Anugrah Septiawan | IT Fresh Graduate Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Mobile-first portfolio of Rizky Anugrah Septiawan, an IT fresh graduate targeting startups with a focus on modern web development." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    const savedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
-    document.documentElement.dataset.theme = initialTheme;
-
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: "#18181B",
-            slateSoft: "#27272A",
-            mist: "#FAFAFA",
-            accent: "#06B6D4",
-            accentSoft: "#CFFAFE",
-          },
-          boxShadow: {
-            float: "0 24px 80px rgba(15, 23, 42, 0.12)",
-          },
-        },
-      },
-    };
-  </script>
-  <link rel="stylesheet" href="style.css" />
+    content="Portfolio of Rizky Anugrah Septiawan, a web developer and digital builder from Medan, Indonesia.">
+  <title>Rizky Anugrah Septiawan | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-mist font-[Poppins] text-ink antialiased">
-  <div class="page-shell">
-    <header class="sticky top-0 z-50 border-b border-white/40 bg-white/75 backdrop-blur-xl">
-      <nav class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8 xl:px-16"
-        aria-label="Main navigation">
-        <div class="flex items-center gap-3">
-          <button type="button" onclick="openModal()" aria-controls="imageModal" aria-label="Open profile photo"
-            class="rounded-2xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
-            <img src="assets/img/my-2.jpeg" alt="Profile"
-              class="h-12 w-12 rounded-2xl object-cover border-[3px] border-black shadow-md cursor-pointer transition hover:scale-105"
-              loading="lazy" />
-          </button>
-
-          <a href="#hero" class="leading-tight">
-            <span class="block text-sm font-semibold">Rizky Anugrah</span>
-            <span class="block text-xs text-slate-500">Web Developer</span>
-          </a>
-        </div>
-
-        <div class="flex items-center gap-3 md:gap-8">
-          <button id="theme-toggle"
-            class="theme-toggle inline-flex justify-center h-11 items-center gap-2 rounded-full border border-slate-200 px-4 text-sm font-medium text-ink transition hover:border-accent hover:text-accent"
-            type="button" aria-label="Switch theme" aria-pressed="false">
-            <span class="theme-toggle__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <span class="theme-toggle__label sr-only">Dark</span>
-          </button>
-
-          <button id="menu-toggle"
-            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-ink transition hover:border-accent hover:text-accent md:hidden"
-            type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
-            </svg>
-          </button>
-
-          <div class="hidden items-center gap-8 md:flex">
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#projects">Projects</a>
-            <a class="nav-link" href="#experience">Experience</a>
-            <a class="nav-link" href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
-
-      <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white md:hidden">
-        <div class="mx-auto flex max-w-7xl flex-col px-5 py-4">
-          <a class="mobile-link" href="#about">About</a>
-          <a class="mobile-link" href="#skills">Skills</a>
-          <a class="mobile-link" href="#projects">Projects</a>
-          <a class="mobile-link" href="#experience">Experience</a>
-          <a class="mobile-link" href="#contact">Contact</a>
-        </div>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="RAS home">RAS<span>.</span></a>
+      <div class="nav-links">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+          href="#experience">Experience</a><a href="#contact">Contact</a>
       </div>
-    </header>
-
-    <main>
-      <!-- HERO -->
-      <section id="hero" class="overflow-hidden">
-        <div
-          class="mx-auto grid w-full max-w-7xl gap-12 px-5 pb-16 pt-10 md:px-8 md:pb-20 md:pt-14 xl:grid-cols-[1.1fr_.9fr] xl:px-16 xl:pb-24 xl:pt-20">
-          <div class="relative">
-            <!-- <span
-              class="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accentSoft px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
-              <span class="relative flex h-2 w-2" aria-hidden="true">
-                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
-                <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
-              </span>
-              Open to Work
-            </span> -->
-
-            <!-- <h1 class="max-w-3xl text-4xl font-bold leading-tight text-ink md:text-5xl xl:text-6xl">
-              Hi, I'm Rizky.
-              <span class="mt-2 block text-accent">I build web experiences that feel smooth and alive.</span>
-            </h1> -->
-
-            <!-- <p class="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
-              Web developer focused on Laravel and modern frontend — turning ideas into functional, responsive, and
-              polished digital products for lean, fast-moving teams.
-            </p> -->
-
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#projects"
-                class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition duration-300 hover:-translate-y-0.5 hover:bg-slateSoft">See
-                Projects</a>
-              <a href="#contact"
-                class="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-medium text-ink transition duration-300 hover:border-ink hover:bg-white">Contact
-                Me</a>
-            </div>
-
-            <dl class="mt-10 grid grid-cols-3 gap-3 text-center">
-              <div class="rounded-2xl border border-slate-200 bg-white/80 px-4 py-5 shadow-sm">
-                <dt class="text-xs uppercase tracking-[0.24em] text-slate-500">Focus</dt>
-                <dd class="mt-2 text-sm font-semibold text-ink md:text-base">Web Dev</dd>
-              </div>
-              <div class="rounded-2xl border border-slate-200 bg-white/80 px-4 py-5 shadow-sm">
-                <dt class="text-xs uppercase tracking-[0.24em] text-slate-500">Stack</dt>
-                <dd class="mt-2 text-sm font-semibold text-ink md:text-base">Laravel</dd>
-              </div>
-              <div class="rounded-2xl border border-slate-200 bg-white/80 px-4 py-5 shadow-sm">
-                <dt class="text-xs uppercase tracking-[0.24em] text-slate-500">Goal</dt>
-                <dd class="mt-2 text-sm font-semibold text-ink md:text-base">Startup Team</dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="relative flex items-center justify-center">
-            <div class="hero-orbit"></div>
-            <article
-              class="hero-card relative w-full max-w-xl rounded-[2rem] border border-white/70 bg-white/90 p-6 shadow-float backdrop-blur">
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <p class="text-sm font-medium text-slate-500">Selected profile</p>
-                  <h2 class="mt-2 text-2xl font-semibold text-ink">Rizky Anugrah Septiawan</h2>
-                </div>
-                <span class="rounded-full bg-ink px-3 py-1 text-xs font-medium text-white">2026</span>
-              </div>
-
-              <div class="mt-6 grid gap-4 md:grid-cols-2">
-                <div class="rounded-3xl bg-ink p-5 text-white">
-                  <p class="text-xs uppercase tracking-[0.2em] text-white/70">Strength</p>
-                  <p class="mt-4 text-xl font-semibold leading-snug">
-                    Clean implementation with a product-minded interface.
-                  </p>
-                </div>
-                <div class="rounded-3xl border border-slate-200 bg-mist p-5">
-                  <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Startup fit</p>
-                  <ul class="mt-4 space-y-3 text-sm text-slate-600">
-                    <li>Fast learner for lean teams</li>
-                    <li>Comfortable building from feedback</li>
-                    <li>Strong semantic and responsive basics</li>
-                  </ul>
-                </div>
-              </div>
-
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section id="about" class="section-spacing">
-        <div class="mx-auto grid w-full max-w-7xl gap-8 px-5 md:px-8 xl:grid-cols-[.9fr_1.1fr] xl:px-16">
-          <div>
-            <p class="section-label">About</p>
-            <h2 class="section-title">About me and the value I bring to digital product development</h2>
-          </div>
-          <div class="grid gap-5">
-            <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-              <p class="text-sm leading-7 text-slate-600 md:text-base">
-                I am Rizky Anugrah Septiawan, a Computer Systems graduate from STMIK Triguna Dharma and a freelance
-                web developer focused on building websites with Laravel.
-                I am used to creating applications that are functional, responsive, and deliver an optimal user
-                experience.
-                In addition, I have a basic understanding of network configuration and electronic systems that supports
-                the development of end-to-end technology solutions.
-              </p>
-            </article>
-            <article class="grid gap-5 md:grid-cols-3">
-              <div class="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
-                <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Based in</p>
-                <p class="mt-3 text-lg font-semibold">Indonesia</p>
-              </div>
-              <div class="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
-                <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Interested in</p>
-                <p class="mt-3 text-lg font-semibold">Frontend & Web App</p>
-              </div>
-              <div class="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
-                <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Working style</p>
-                <p class="mt-3 text-lg font-semibold">Collaborative, fast, curious</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section id="skills" class="section-spacing bg-white/70">
-        <div class="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-16">
-          <div class="mb-12 md:mb-14">
-            <p class="section-label">Tech Stack</p>
-            <h2 class="section-title max-w-3xl">
-              The tools I use, from rapid prototyping to production-scale system development.
-            </h2>
-          </div>
-
-          <!-- FRONTEND -->
-          <div class="mb-14">
-            <div class="mb-8 flex items-center gap-3">
-              <span class="skill-group-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <rect x="3" y="4" width="18" height="13" rx="2" />
-                  <path d="M8 21h8M12 17v4" stroke-linecap="round" />
-                </svg>
-              </span>
-              <div>
-                <h3 class="skill-group-title">Frontend</h3>
-                <p class="skill-group-desc">Interfaces users see and interact with every day</p>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">H</span>
-                  <div>
-                    <h3 class="skill-name">HTML</h3>
-                    <p class="skill-meta">Semantic structure</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="HTML proficiency 92%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 92%"></span></span>
-                  <span class="skill-bar__value">92%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">C</span>
-                  <div>
-                    <h3 class="skill-name">CSS</h3>
-                    <p class="skill-meta">Responsive styling</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="CSS proficiency 88%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 88%"></span></span>
-                  <span class="skill-bar__value">88%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">J</span>
-                  <div>
-                    <h3 class="skill-name">JavaScript</h3>
-                    <p class="skill-meta">Interactive UI</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="JavaScript proficiency 82%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 82%"></span></span>
-                  <span class="skill-bar__value">82%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">B</span>
-                  <div>
-                    <h3 class="skill-name">Bootstrap</h3>
-                    <p class="skill-meta">Fast prototyping</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Bootstrap proficiency 86%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 86%"></span></span>
-                  <span class="skill-bar__value">86%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">T</span>
-                  <div>
-                    <h3 class="skill-name">Tailwind CSS</h3>
-                    <p class="skill-meta">Utility-first CSS</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Tailwind CSS proficiency 88%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 88%"></span></span>
-                  <span class="skill-bar__value">88%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">G</span>
-                  <div>
-                    <h3 class="skill-name">GSAP</h3>
-                    <p class="skill-meta">Animation library</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="GSAP proficiency 72%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 72%"></span></span>
-                  <span class="skill-bar__value">72%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">A</span>
-                  <div>
-                    <h3 class="skill-name">Alpine.js</h3>
-                    <p class="skill-meta">Lightweight interactivity</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Alpine.js proficiency 78%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 78%"></span></span>
-                  <span class="skill-bar__value">78%</span>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- BACKEND -->
-          <div class="mb-14">
-            <div class="mb-8 flex items-center gap-3">
-              <span class="skill-group-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <rect x="3" y="4" width="18" height="7" rx="2" />
-                  <rect x="3" y="13" width="18" height="7" rx="2" />
-                  <path d="M7 7.5h.01M7 16.5h.01" stroke-linecap="round" />
-                </svg>
-              </span>
-              <div>
-                <h3 class="skill-group-title">Backend</h3>
-                <p class="skill-group-desc">Logic, data, and the glue that powers the product</p>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">P</span>
-                  <div>
-                    <h3 class="skill-name">PHP</h3>
-                    <p class="skill-meta">Server-side logic</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="PHP proficiency 86%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 86%"></span></span>
-                  <span class="skill-bar__value">86%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">L</span>
-                  <div>
-                    <h3 class="skill-name">Laravel</h3>
-                    <p class="skill-meta">MVC framework</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Laravel proficiency 84%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 84%"></span></span>
-                  <span class="skill-bar__value">84%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">M</span>
-                  <div>
-                    <h3 class="skill-name">MySQL</h3>
-                    <p class="skill-meta">Relational database</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="MySQL proficiency 82%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 82%"></span></span>
-                  <span class="skill-bar__value">82%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">R</span>
-                  <div>
-                    <h3 class="skill-name">RESTful APIs</h3>
-                    <p class="skill-meta">Data integration</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="RESTful APIs proficiency 78%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 78%"></span></span>
-                  <span class="skill-bar__value">78%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">E</span>
-                  <div>
-                    <h3 class="skill-name">ERD</h3>
-                    <p class="skill-meta">Database design</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="ERD proficiency 84%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 84%"></span></span>
-                  <span class="skill-bar__value">84%</span>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- TOOLS -->
-          <div>
-            <div class="mb-8 flex items-center gap-3">
-              <span class="skill-group-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
-                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
-                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
-                </svg>
-              </span>
-              <div>
-                <h3 class="skill-group-title">Tools</h3>
-                <p class="skill-group-desc">Supporting workflow for design, data, and collaboration</p>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">G</span>
-                  <div>
-                    <h3 class="skill-name">Git</h3>
-                    <p class="skill-meta">Version control</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Git proficiency 82%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 82%"></span></span>
-                  <span class="skill-bar__value">82%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">D</span>
-                  <div>
-                    <h3 class="skill-name">dbdiagram</h3>
-                    <p class="skill-meta">Database modeling</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="dbdiagram proficiency 88%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 88%"></span></span>
-                  <span class="skill-bar__value">88%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">L</span>
-                  <div>
-                    <h3 class="skill-name">Lucidchart</h3>
-                    <p class="skill-meta">System design</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Lucidchart proficiency 80%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 80%"></span></span>
-                  <span class="skill-bar__value">80%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">P</span>
-                  <div>
-                    <h3 class="skill-name">Postman</h3>
-                    <p class="skill-meta">API testing</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Postman proficiency 78%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 78%"></span></span>
-                  <span class="skill-bar__value">78%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">S</span>
-                  <div>
-                    <h3 class="skill-name">SketchUp</h3>
-                    <p class="skill-meta">3D design</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="SketchUp proficiency 72%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 72%"></span></span>
-                  <span class="skill-bar__value">72%</span>
-                </div>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card__top">
-                  <span class="skill-card__icon" aria-hidden="true">P</span>
-                  <div>
-                    <h3 class="skill-name">Proteus 8 Professional</h3>
-                    <p class="skill-meta">Circuit schematics</p>
-                  </div>
-                </div>
-                <div class="skill-bar" role="img" aria-label="Proteus 8 Professional proficiency 70%">
-                  <span class="skill-bar__track"><span class="skill-bar__fill" style="--level: 70%"></span></span>
-                  <span class="skill-bar__value">70%</span>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="section-spacing">
-        <div class="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-16">
-          <div class="mb-12">
-            <p class="section-label">Projects</p>
-            <h2 class="section-title max-w-3xl">Some of the projects I have worked on</h2>
-            <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
-              A selection of web applications I have built — from digital invitations and booking platforms to IoT
-              dashboards.
-            </p>
-          </div>
-
-          <div class="grid gap-6 py-3 xl:grid-cols-3">
-            <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative"
-                style="background-image: url('https://raw.githubusercontent.com/rizkyanugrah77/Rizky_Anugrah-portfolio/main/assets/img/Wayaenikah.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-                <!-- Gradient overlay for better text readability -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                <div class="project-frame relative z-10 p-6">
-                  <span class="project-badge">
-                    Digital Invitation Website
-                  </span>
-
-                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
-                    Wayae Nikah
-                  </h3>
-
-                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
-                    A modern and responsive digital wedding invitation platform.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-body p-6">
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span class="stack-tag">Laravel</span>
-                  <span class="stack-tag">Livewire</span>
-                  <span class="stack-tag">Tailwind CSS</span>
-                </div>
-
-                <p class="text-sm leading-7 text-slate-600">
-                  An elegant and practical digital wedding invitation solution with RSVP, gallery, and online payment
-                  features for a smoother and more memorable event experience.
-                </p>
-
-                <div class="project-actions">
-                  <a href="https://wayaenikah.com/" target="_blank" class="button-primary">Live Demo</a>
-                  <a href="https://github.com/rizkyanugrah77/undangan-digital" target="_blank"
-                    class="button-secondary">Source Code</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative"
-                style="background-image: url('https://raw.githubusercontent.com/rizkyanugrah77/Rizky_Anugrah-portfolio/main/assets/img/sitiotio.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-                <!-- Gradient overlay for better text readability -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                <div class="project-frame relative z-10 p-6">
-                  <span class="project-badge">
-                    Sitio tio Resort
-                  </span>
-
-                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
-                    Sitio tio Resort Website
-                  </h3>
-
-                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
-                    Website for booking rooms and villas at Sitio Tio Resort.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-body p-6">
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span class="stack-tag">Laravel</span>
-                  <span class="stack-tag">Livewire</span>
-                  <span class="stack-tag">Alpine JS</span>
-                </div>
-
-                <p class="text-sm leading-7 text-slate-600">
-                  Website for booking rooms and villas at Sitio Tio Resort.
-                </p>
-
-                <div class="project-actions">
-                  <a href="https://sitiotio.test/" target="_blank" class="button-primary">Live Demo</a>
-                  <a href="https://github.com/rizkyanugrah77/sitio-tio" target="_blank"
-                    class="button-secondary">Source Code</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card group" data-spotlight>
-              <div class="project-thumb relative thumb-teal"
-                style="background-image: url('https://raw.githubusercontent.com/rizkyanugrah77/Rizky_Anugrah-portfolio/main/assets/img/go-tik.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-                <!-- Gradient overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                <div class="project-frame relative z-10 p-6">
-                  <span class="project-badge">
-                    Concert Ticketing Web Platform
-                  </span>
-
-                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
-                    Gotik
-                  </h3>
-
-                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
-                    A web-based concert ticket booking platform with an online reservation system.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-body p-6">
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span class="stack-tag">Laravel</span>
-                  <span class="stack-tag">Bootstrap</span>
-                  <span class="stack-tag">JavaScript</span>
-                </div>
-
-                <p class="text-sm leading-7 text-slate-600">
-                  A digital concert ticketing solution with a seamless booking experience, supported by a modern
-                  interface and an integrated payment system.
-                </p>
-
-                <div class="project-actions">
-                  <a href="https://go-tik.com/" target="_blank" class="button-primary">Live Demo</a>
-                  <a href="https://github.com/rizkyanugrah77/ticket" target="_blank" class="button-secondary">
-                    Source Code
-                  </a>
-                </div>
-              </div>
-            </article>
-</div>
-
-          <div class="grid gap-6 py-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-             <article class="project-card project-card--compact group" data-spotlight>
-              <div class="project-thumb relative thumb-teal"
-                style="background-image: url('https://raw.githubusercontent.com/rizkyanugrah77/Rizky_Anugrah-portfolio/main/assets/img/suhu.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-                <!-- Gradient overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                <div class="project-frame relative z-10 p-6">
-
-                  <!-- Improved badge -->
-                  <span class="project-badge inline-block max-w-full leading-snug">
-                    IoT-Based Water Quality Monitoring System
-                  </span>
-
-                  <h3 class="mt-4 text-sm font-semibold text-white drop-shadow-md">
-                    Water Quality Monitoring Dashboard
-                  </h3>
-
-                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
-                    An IoT-based water quality monitoring system that displays sensor data in real time.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-body p-6">
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span class="stack-tag">Laravel</span>
-                  <span class="stack-tag">IoT</span>
-                  <span class="stack-tag">ESP8266</span>
-                </div>
-
-                <p class="text-sm leading-7 text-slate-600">
-                  Built with a REST API-based architecture for sensor data processing, along with a structured database
-                  design to ensure accurate real-time data visualization.
-                </p>
-
-                <div class="project-actions">
-                  <!-- Optional if you want to enable it later -->
-                  <!-- <a href="#" class="button-primary">Live Demo</a> -->
-
-                  <a href="https://github.com/rizkyanugrah77/Monitoring-Kualitas-Air" target="_blank"
-                    class="button-secondary">
-                    Source Code
-                  </a>
-                </div>
-              </div>
-            </article>
-            
-            <article class="project-card project-card--compact group" data-spotlight>
-             <div class="project-thumb relative thumb-teal"
-                style="background-image: url('assets/img/nomads.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                <div class="project-frame relative z-10 p-6">
-                  <span class="project-badge">
-                    Travel Web Platform
-                  </span>
-
-                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
-                    Nomads
-                  </h3>
-
-                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
-                    A modern and responsive travel booking platform for exploring destinations with ease.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-body p-6">
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span class="stack-tag">Laravel</span>
-                  <span class="stack-tag">MySQL</span>
-                  <span class="stack-tag">Bootstrap</span>
-                </div>
-
-                <p class="text-sm leading-7 text-slate-600">
-                  A travel booking solution with destination search, tour package booking, online payments, and trip
-                  management for an easier vacation experience.
-                </p>
-
-                <div class="project-actions">
-                  <a href="https://github.com/rizkyanugrah77/Nomads" target="_blank" class="button-secondary">Source
-                    Code</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card project-card--compact group" data-spotlight>
-              <div class="project-thumb relative thumb-cyan">
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                <div class="project-frame relative z-10 p-6">
-                  <span class="project-badge">
-                    Air Quality Monitoring
-                  </span>
-
-                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
-                    Air Quality Dashboard
-                  </h3>
-
-                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
-                    A web-based dashboard for monitoring air quality in real time with interactive visualizations.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-body p-6">
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span class="stack-tag">Laravel</span>
-                  <span class="stack-tag">IoT</span>
-                  <span class="stack-tag">Arduino</span>
-                </div>
-
-                <p class="text-sm leading-7 text-slate-600">
-                  A monitoring system with real-time PM2.5, temperature, and humidity data, complete with interactive
-                  charts and dangerous condition alerts.
-                </p>
-
-                <div class="project-actions">
-                  <a href="https://github.com/rizkyanugrah77/Monitoring-Kualitas-Air" target="_blank"
-                    class="button-secondary">Source Code</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card project-card--compact group" data-spotlight>
-              <div class="project-thumb relative thumb-teal">
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                <div class="project-frame relative z-10 p-6">
-                  <span class="project-badge">
-                    Landing Page E-Commerce
-                  </span>
-
-                  <h3 class="mt-4 text-xl font-semibold text-white drop-shadow-md">
-                    Luxpaces
-                  </h3>
-
-                  <p class="mt-2 max-w-xs text-sm leading-6 text-white/90 drop-shadow-sm">
-                    A modern landing page designed to showcase products attractively and increase conversions.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-body p-6">
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span class="stack-tag">Tailwind CSS</span>
-                  <span class="stack-tag">Alpine JS</span>
-                  <span class="stack-tag">JavaScript</span>
-                </div>
-
-                <p class="text-sm leading-7 text-slate-600">
-                  Focused on user experience and conversion through product catalog features, promotional highlights,
-                  and
-                  performance optimization for fast loading.
-                </p>
-
-                <div class="project-actions">
-                  <a href="https://github.com/rizkyanugrah77/luxspace" target="_blank" class="button-secondary">Source
-                    Code</a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience" class="section-spacing bg-white/70">
-        <div class="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-16">
-          <p class="section-label">Experience</p>
-          <div class="mb-10 flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
-            <h2 class="section-title max-w-3xl"> Learning Journey & Experience
-            </h2>
-
-          </div>
-
-          <div class="grid gap-5 md:grid-cols-3">
-            <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-              <p class="text-sm font-medium text-accent">2025</p>
-              <h3 class="mt-3 text-xl font-semibold">Portfolio & personal branding</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Building a portfolio focused on positioning for startup recruiters, not just documenting assignments.
-              </p>
-            </article>
-            <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-              <p class="text-sm font-medium text-accent">Learning Track</p>
-              <h3 class="mt-3 text-xl font-semibold">Web development practice</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Building front-end practice projects, core back-end skills, and data integration to strengthen my
-                practical foundation.
-              </p>
-            </article>
-            <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-              <p class="text-sm font-medium text-accent">Next Goal</p>
-              <h3 class="mt-3 text-xl font-semibold">Join a product-driven team</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Looking for a fast-paced, collaborative environment that provides room to learn while shipping products.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="section-spacing">
-        <div class="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-16">
-          <div class="contact-panel grid gap-10 lg:grid-cols-2  items-center">
-
-            <!-- LEFT: TEXT -->
-            <div>
-              <p class="section-label">Contact</p>
-              <h2 class="section-title max-w-2xl text-white">
-                Let's build digital products that are polished, functional, and ready to grow
-              </h2>
-              <p class="mt-5 max-w-xl text-sm leading-7 text-white/75 md:text-base">
-                I am open to job opportunities, collaborations, and digital product development projects.
-                Feel free to reach out through the form or the platforms below.
-              </p>
-
-              <div class="mt-6 grid gap-4 sm:grid-cols-2">
-                <a class="contact-card" href="mailto:rizkyseptiawan330@gmail.com">
-                  <span class="contact-label">Email</span>
-                  <span class="contact-value">rizkyseptiawan330@gmail.com</span>
-                </a>
-                <a class="contact-card" href="https://github.com/rizkyanugrah77" target="_blank">
-                  <span class="contact-label">GitHub</span>
-                  <span class="contact-value">rizkyanugrah77</span>
-                </a>
-                <a class="contact-card" href="https://www.linkedin.com/in/rizky-anugrah-9637b028b/" target="_blank">
-                  <span class="contact-label">LinkedIn</span>
-                  <span class="contact-value">rizky-anugrah</span>
-                </a>
-                <a class="contact-card" href="https://www.instagram.com/rizky_anugrah77/" target="_blank">
-                  <span class="contact-label">Instagram</span>
-                  <span class="contact-value">rizky_anugrah77</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- RIGHT: FORM -->
-            <form onsubmit="sendToWhatsApp(event)"
-              class="bg-white rounded-2xl p-6 shadow-md space-y-4 w-full">
-              <h3 class="text-lg font-semibold text-slate-800">Send a Message</h3>
-
-              <div>
-                <label class="text-sm text-slate-600">Name</label>
-                <input id="nama" type="text" placeholder="Your name"
-                  class="w-full mt-1 px-4 py-2 rounded-lg border border-slate-300">
-              </div>
-
-              <div>
-                <label class="text-sm text-slate-600">Email</label>
-                <input id="email" type="email" placeholder="email@gmail.com"
-                  class="w-full mt-1 px-4 py-2 rounded-lg border border-slate-300">
-              </div>
-
-              <div>
-                <label class="text-sm text-slate-600">Message</label>
-                <textarea id="pesan" rows="4" placeholder="Write your message..."
-                  class="w-full mt-1 px-4 py-2 rounded-lg border border-slate-300"></textarea>
-              </div>
-
-              <button type="submit"
-                class="w-full bg-accent text-white py-2 rounded-lg font-medium hover:opacity-90 transition">
-                Send via WhatsApp
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="border-t border-slate-200 bg-white">
-      <div
-        class="mx-auto flex w-full max-w-7xl flex-col gap-4 px-5 py-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between md:px-8 xl:px-16">
-        <p>&copy; <span id="year"></span> Rizky Anugrah Septiawan.</p>
-        <div class="flex gap-5">
-          <a class="footer-link" href="#about">About</a>
-          <a class="footer-link" href="#projects">Projects</a>
-          <a class="footer-link" href="#contact">Contact</a>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <div id="imageModal" aria-hidden="true" aria-label="Profile photo preview"
-    class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">
-    <div class="relative inline-flex items-center justify-center" onclick="event.stopPropagation()">
-      <button type="button" onclick="closeModal()" aria-label="Close profile photo preview"
-        class="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white text-base font-bold text-black shadow-lg transition hover:scale-105">
-        &times;
-      </button>
-
-      <img src="assets/img/my-2.jpeg" alt="Profile Large" class="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl" />
+      <a class="nav-talk" href="#contact">Let's Talk</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu"><span
+          class="material-symbols-rounded" aria-hidden="true">menu</span><span>Menu</span></button>
+    </nav>
+    <div class="mobile-menu container" id="mobile-menu" hidden>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+        href="#experience">Experience</a><a href="#contact">Contact</a>
+      <a class="mobile-talk" href="#contact">Let's Talk</a>
     </div>
-  </div>
+  </header>
 
-  <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const themeToggle = document.getElementById("theme-toggle");
-    const themeToggleIcon = themeToggle.querySelector(".theme-toggle__icon");
-    const themeToggleLabel = themeToggle.querySelector(".theme-toggle__label");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileLinks = document.querySelectorAll(".mobile-link");
-    const year = document.getElementById("year");
-    const spotlightCards = document.querySelectorAll("[data-spotlight]");
+  <main id="main-content">
+    <section class="hero container" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Web Developer <span aria-hidden="true">·</span> Digital Builder</p>
+        <p class="availability"><span aria-hidden="true"></span> Available for opportunities</p>
+        <h1>Building thoughtful <em>digital</em> experiences.</h1>
+        <p class="hero-intro">I'm Rizky Anugrah Septiawan, a Web Developer who builds fast, clean, responsive websites
+          and useful digital products.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View My Work</a>
+          <a class="button button-quiet" href="mailto:rizkyseptiawan330@gmail.com?subject=CV%20request">Request CV</a>
+        </div>
+      </div>
+      <figure class="portrait-card reveal" aria-label="Portrait of Rizky Anugrah Septiawan">
+        <div class="paper-layer paper-layer-one"></div>
+        <div class="paper-layer paper-layer-two"></div>
+        <img src="assets/img/my-2.jpeg" alt="Rizky Anugrah Septiawan" width="600" height="750" fetchpriority="high">
+        <figcaption><span>Rizky Anugrah Septiawan</span><span>Medan, ID</span></figcaption>
+      </figure>
+    </section>
 
-    const applyTheme = (theme) => {
-      const isDark = theme === "dark";
-      document.documentElement.dataset.theme = theme;
-      themeToggle.setAttribute("aria-pressed", String(isDark));
-      themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
-      themeToggleIcon.innerHTML = isDark ?
-        `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"
-              stroke-linecap="round" />
-          </svg>` :
-        `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path
-              d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
-              stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>`;
-      themeToggleLabel.textContent = isDark ? "Light" : "Dark";
-      localStorage.setItem("theme", theme);
-    };
+    <section class="about section container" id="about">
+      <div class="section-intro reveal">
+        <p class="eyebrow">A short introduction</p>
+        <h2>Practical by training, detail-led by habit.</h2>
+      </div>
+      <div class="about-content reveal">
+        <p class="about-lead">Rizky Anugrah Septiawan is a System Computer graduate from STMIK Triguna Dharma with a GPA
+          of 3.65. He works as a freelance Web Developer and enjoys turning ideas into clean, responsive, and practical
+          web experiences.</p>
+        <p>His background combines web development, system design, technical troubleshooting, networking, and IoT
+          projects.</p>
+        <dl class="facts">
+          <div>
+            <dt>Based in</dt>
+            <dd>Medan, Indonesia</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>S1 Sistem Komputer</dd>
+          </div>
+          <div>
+            <dt>Current work</dt>
+            <dd>Freelance Web Developer</dd>
+          </div>
+          <div>
+            <dt>Availability</dt>
+            <dd>Open to opportunities</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-    year.textContent = new Date().getFullYear();
-    applyTheme(document.documentElement.dataset.theme || "light");
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="skills-heading reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Built across the browser, server, and field.</h2>
+          <p>Tools I use to shape interfaces, connect systems, and troubleshoot the layers beneath them.</p>
+        </div>
+        <div class="skill-groups">
+          <section class="skill-group reveal">
+            <h3>Frontend development</h3>
+            <div class="skill-grid"><span><i class="material-symbols-rounded">code</i>HTML</span><span><i
+                  class="material-symbols-rounded">css</i>CSS</span><span><i
+                  class="material-symbols-rounded">javascript</i>JavaScript</span><span><i
+                  class="material-symbols-rounded">palette</i>Tailwind CSS</span><span><i
+                  class="material-symbols-rounded">web</i>Bootstrap</span><span><i
+                  class="material-symbols-rounded">mountain_flag</i>Alpine.js</span><span><i
+                  class="material-symbols-rounded">devices</i>Responsive Web Design</span></div>
+          </section>
+          <section class="skill-group reveal">
+            <h3>Backend development</h3>
+            <div class="skill-grid"><span><i class="material-symbols-rounded">terminal</i>PHP</span><span><i
+                  class="material-symbols-rounded">account_tree</i>Laravel</span><span><i
+                  class="material-symbols-rounded">bolt</i>Livewire</span><span><i
+                  class="material-symbols-rounded">api</i>RESTful API</span></div>
+          </section>
+          <section class="skill-group reveal">
+            <h3>Database and design tools</h3>
+            <div class="skill-grid"><span><i class="material-symbols-rounded">database</i>MySQL</span><span><i
+                  class="material-symbols-rounded">schema</i>ERD</span><span><i
+                  class="material-symbols-rounded">hub</i>Git &amp; GitHub</span><span><i
+                  class="material-symbols-rounded">design_services</i>Figma</span></div>
+          </section>
+          <section class="skill-group reveal">
+            <h3>Technical support and IoT</h3>
+            <div class="skill-grid"><span><i class="material-symbols-rounded">lan</i>LAN &amp; IP
+                Addressing</span><span><i class="material-symbols-rounded">router</i>Router &amp; Switch
+                Configuration</span><span><i class="material-symbols-rounded">handyman</i>Troubleshooting</span><span><i
+                  class="material-symbols-rounded">memory</i>Arduino IDE</span><span><i
+                  class="material-symbols-rounded">sensors</i>ESP8266</span><span><i
+                  class="material-symbols-rounded">description</i>Google Workspace &amp; Microsoft Office</span></div>
+          </section>
+        </div>
+      </div>
+    </section>
 
-    menuToggle.addEventListener("click", () => {
-      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!expanded));
-      mobileMenu.classList.toggle("hidden");
-    });
+    <section class="projects section container" id="projects">
+      <div class="project-heading reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects made for real moments and real operations.</h2>
+      </div>
+      <article class="project-feature reveal">
+        <div class="project-image"><img src="assets/img/Wayaenikah.png" alt="Wayae Nikah project interface"
+            loading="lazy"></div>
+        <div class="project-content">
+          <p class="project-category">Digital Wedding Invitation Platform</p>
+          <h3>Wayae Nikah</h3>
+          <p>A modern online wedding invitation platform built with Laravel, Livewire, Tailwind CSS, and Midtrans
+            payment integration.</p>
+          <div class="tags"><span>Laravel</span><span>Livewire</span><span>Tailwind CSS</span><span>Midtrans</span>
+          </div>
+          <div class="project-links"><a href="https://wayaenikah.com/" target="_blank" rel="noopener">Live Demo</a><a
+              href="https://github.com/rizkyanugrah77/undangan-digital" target="_blank" rel="noopener">Source Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="project-split reveal">
+        <div class="project-content">
+          <p class="project-category">Concert Ticket Platform</p>
+          <h3>Go-Tik</h3>
+          <p>A concert-ticket website redesign with improved UI/UX, database structure, and booking-oriented user flow.
+          </p>
+          <div class="tags"><span>Laravel</span><span>Bootstrap</span><span>MySQL</span></div>
+          <div class="project-links"><a href="https://go-tik.com/" target="_blank" rel="noopener">Live Demo</a><a
+              href="https://github.com/rizkyanugrah77/ticket" target="_blank" rel="noopener">Source Code</a></div>
+        </div>
+        <div class="project-image"><img src="assets/img/go-tik.png" alt="Go-Tik project interface" loading="lazy"></div>
+      </article>
+      <div class="project-pair">
+        <article class="project-editorial reveal">
+          <div class="project-blank"><span class="material-symbols-rounded" aria-hidden="true">hotel</span>
+            <p>Project preview<br>not available</p>
+          </div>
+          <div class="project-content">
+            <p class="project-category">Reservation Management</p>
+            <h3>Hotel Booking System</h3>
+            <p>A hotel room booking and payment platform with room availability, booking status, and Midtrans
+              integration.</p>
+            <div class="tags"><span>Laravel</span><span>Livewire</span><span>Tailwind
+                CSS</span><span>MySQL</span><span>Midtrans</span></div>
+            <p class="project-note">Live demo and source link are not available.</p>
+          </div>
+        </article>
+        <article class="project-editorial reveal">
+          <div class="project-image"><img src="assets/img/suhu.jpg" alt="IoT water quality monitoring project interface"
+              loading="lazy"></div>
+          <div class="project-content">
+            <p class="project-category">IoT Dashboard</p>
+            <h3>Water Quality Monitoring</h3>
+            <p>A real-time web monitoring system for water-quality data using microcontrollers and a Laravel-based
+              dashboard.</p>
+            <div class="tags"><span>Arduino IDE</span><span>ESP8266</span><span>Laravel</span><span>MySQL</span></div>
+            <div class="project-links"><a href="https://github.com/rizkyanugrah77/Monitoring-Kualitas-Air"
+                target="_blank" rel="noopener">Source Code</a></div>
+          </div>
+        </article>
+      </div>
+      <article class="project-wordpress reveal">
+        <div>
+          <p class="project-category">Website Management</p>
+          <h3>WordPress Website Administration</h3>
+        </div>
+        <p>Website content and administration work for nongkingopi.com, harianwarganet.com, and animechan.com.</p>
+        <div class="tags"><span>WordPress</span><span>SEO</span><span>Content Management</span></div>
+      </article>
+      <div class="project-pair project-pair--additional">
+        <article class="project-editorial reveal">
+          <div class="project-blank"><span class="material-symbols-rounded" aria-hidden="true">thermostat</span><p>Project preview<br>not available</p></div>
+          <div class="project-content"><p class="project-category">Monitoring Website</p><h3>Monitoring Suhu</h3><p>A PHP-based website for temperature monitoring.</p><div class="tags"><span>PHP</span></div><div class="project-links"><a href="https://github.com/rizkyanugrah77/Monitoring-Suhu" target="_blank" rel="noopener">Source Code</a></div></div>
+        </article>
+        <article class="project-editorial reveal">
+          <div class="project-image"><img src="assets/img/nomads.png" alt="Nomads travel website interface" loading="lazy"></div>
+          <div class="project-content"><p class="project-category">Travel Web Platform</p><h3>Nomads</h3><p>A travel booking platform for exploring destinations and planning trips.</p><div class="tags"><span>JavaScript</span></div><div class="project-links"><a href="https://github.com/rizkyanugrah77/Nomads" target="_blank" rel="noopener">Source Code</a></div></div>
+        </article>
+      </div>
+      <div class="project-pair project-pair--additional">
+        <article class="project-editorial reveal">
+          <div class="project-blank"><span class="material-symbols-rounded" aria-hidden="true">domain</span><p>Project preview<br>not available</p></div>
+          <div class="project-content"><p class="project-category">Office Rental Website</p><h3>Sewa Kantor</h3><p>A Next.js project for an office rental website.</p><div class="tags"><span>Next.js</span><span>TypeScript</span></div><div class="project-links"><a href="https://github.com/rizkyanugrah77/Sewa-Kantor" target="_blank" rel="noopener">Source Code</a></div></div>
+        </article>
+        <article class="project-editorial reveal">
+          <div class="project-blank"><span class="material-symbols-rounded" aria-hidden="true">storefront</span><p>Project preview<br>not available</p></div>
+          <div class="project-content"><p class="project-category">E-Commerce Landing Page</p><h3>Luxspace</h3><p>An e-commerce landing page project.</p><div class="tags"><span>HTML</span></div><div class="project-links"><a href="https://github.com/rizkyanugrah77/luxspace" target="_blank" rel="noopener">Source Code</a></div></div>
+        </article>
+      </div>
+    </section>
 
-    themeToggle.addEventListener("click", () => {
-      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      applyTheme(nextTheme);
-    });
+    <section class="experience section" id="experience">
+      <div class="container experience-inner">
+        <div class="experience-heading reveal">
+          <p class="eyebrow">Professional path</p>
+          <h2>Work that has stayed close to people and systems.</h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal">
+            <p>2023-Present</p>
+            <h3>Freelance Web Developer</h3><span>Build personal and business websites, responsive interfaces, Laravel
+              applications, and database-driven systems.</span>
+          </li>
+          <li class="reveal">
+            <p>2022-Present</p>
+            <h3>Scientific Writing Consultant</h3><span>Support academic writing, research organization, and document
+              preparation.</span>
+          </li>
+          <li class="reveal">
+            <p>2019-2021</p>
+            <h3>Receptionist, Nesia Holiday &amp; Leisure</h3><span>Managed guest communication, administrative tasks,
+              and daily operational coordination.</span>
+          </li>
+          <li class="reveal">
+            <p>2016</p>
+            <h3>Internship, Lucky Komputer Digital</h3><span>Assisted with computer troubleshooting, installation, and
+              basic hardware support.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-    mobileLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        menuToggle.setAttribute("aria-expanded", "false");
-        mobileMenu.classList.add("hidden");
-      });
-    });
-
-    spotlightCards.forEach((card) => {
-      card.addEventListener("pointermove", (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        card.style.setProperty("--spot-x", `${x}px`);
-        card.style.setProperty("--spot-y", `${y}px`);
-      });
-    });
-
-
-    function sendToWhatsApp(e) {
-      e.preventDefault();
-
-      const nama = document.getElementById("nama").value;
-      const email = document.getElementById("email").value;
-      const pesan = document.getElementById("pesan").value;
-
-      const noHP = "6282162008433"; // REPLACE with your number (use 62, without 0)
-
-      const text = `Hello, I am ${nama}%0AEmail: ${email}%0AMessage: ${pesan}`;
-
-      const url = `https://wa.me/${noHP}?text=${text}`;
-
-      window.open(url, "_blank");
-    }
-    const imageModal = document.getElementById("imageModal");
-
-    function openModal() {
-      imageModal.classList.remove("hidden");
-      imageModal.classList.add("flex");
-      imageModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("overflow-hidden");
-    }
-
-    function closeModal() {
-      imageModal.classList.add("hidden");
-      imageModal.classList.remove("flex");
-      imageModal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("overflow-hidden");
-    }
-
-    imageModal.addEventListener("click", function (event) {
-      if (event.target === imageModal) {
-        closeModal();
-      }
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && imageModal.classList.contains("flex")) {
-        closeModal();
-      }
-    });
-  </script>
+    <section class="contact section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Let's build something useful.</h2>
+          <p>Have a project, opportunity, or idea? I would be happy to connect.</p>
+          <div class="social-links"><a href="mailto:rizkyseptiawan330@gmail.com"><i class="material-symbols-rounded"
+                aria-hidden="true">mail</i>Email</a><a href="https://www.linkedin.com/in/rizky-anugrah-9637b028b/"
+              target="_blank" rel="noopener"><i class="material-symbols-rounded"
+                aria-hidden="true">business_center</i>LinkedIn</a><a href="https://github.com/rizkyanugrah77"
+              target="_blank" rel="noopener"><i class="material-symbols-rounded" aria-hidden="true">code</i>GitHub</a><a
+              href="https://wa.me/6282162008433" target="_blank" rel="noopener"><i class="material-symbols-rounded"
+                aria-hidden="true">chat</i>WhatsApp</a></div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <h3>Send a message</h3><label for="name">Name</label><input id="name" name="name" type="text"
+            autocomplete="name" placeholder="Your name" required><label for="email">Email</label><input id="email"
+            name="email" type="email" autocomplete="email" placeholder="email@example.com" required><label
+            for="subject">Subject</label><input id="subject" name="subject" type="text"
+            placeholder="What would you like to discuss?" required><label for="message">Message</label><textarea
+            id="message" name="message" rows="5" placeholder="Share a few details about your project or opportunity."
+            required></textarea>
+          <p class="form-status" id="form-status" aria-live="polite"></p><button class="button button-primary"
+            type="submit">Send via WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Rizky Anugrah Septiawan</p>
+      <p>Designed with intention.</p><a href="https://github.com/rizkyanugrah77" target="_blank" rel="noopener"
+        aria-label="Visit Rizky's GitHub"><span class="material-symbols-rounded" aria-hidden="true">code</span></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
