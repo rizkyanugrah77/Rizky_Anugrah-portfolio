@@ -861,13 +861,25 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .hero>*,
+    .about>*,
+    .experience-inner>*,
+    .contact-layout>*,
+    .project-feature>*,
+    .project-split>*,
+    .project-pair>*,
+    .project-wordpress>* {
+        min-width: 0;
+    }
+
     .hero {
         min-height: auto;
     }
 
     .portrait-card {
         justify-self: start;
-        width: min(430px, calc(100% - 25px));
+        width: 100%;
+        max-width: 380px;
         margin: 1rem 0 0 10px;
     }
 
@@ -918,7 +930,7 @@ img {
     }
 
     .hero h1 {
-        font-size: clamp(2.8rem, 14vw, 4rem);
+        font-size: clamp(1.9rem, 7vw, 2rem);
     }
 
     .hero-actions {
@@ -996,6 +1008,86 @@ img {
 
     .footer a {
         margin-left: auto;
+    }
+}
+
+@media (max-width:480px) {
+    .container {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .hero {
+        gap: 2rem;
+        padding-block: 2.75rem 3.5rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.9rem, 8vw, 2rem);
+    }
+
+    .section {
+        padding-block: 3.5rem;
+    }
+
+    .portrait-card {
+        width: calc(100% - 22px);
+        margin-left: 8px;
+        padding: 10px;
+        box-shadow: 11px 13px 0 var(--sand), 0 18px 32px rgba(36, 21, 15, .12);
+        transform: none;
+    }
+
+    .portrait-card::before {
+        width: 125px;
+        height: 125px;
+        right: -20px;
+    }
+
+    .paper-layer-one {
+        inset: 16px -14px -14px 18px;
+    }
+
+    .paper-layer-two {
+        inset: -10px 18px 14px -14px;
+    }
+
+    .skill-grid,
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-grid span {
+        min-height: 46px;
+        padding: .55rem .7rem;
+        font-size: .75rem;
+    }
+
+    .project-content {
+        padding: 1.25rem;
+    }
+
+    .project-image,
+    .project-editorial .project-image,
+    .project-blank {
+        min-height: 200px;
+    }
+
+    .footer .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 44px;
+        column-gap: .75rem;
+    }
+
+    .footer p:first-child,
+    .footer p:nth-child(2) {
+        grid-column: 1;
+    }
+
+    .footer a {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        margin-left: 0;
+        align-self: center;
     }
 }
 
