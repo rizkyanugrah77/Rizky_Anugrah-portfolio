@@ -710,16 +710,18 @@ ol {
   border-top: 0;
 }
 
-.edu-icon {
+.edu-list .edu-icon {
   flex: none;
   width: 34px;
   height: 34px;
   border-radius: 8px;
   background: var(--surface-2);
   border: 1px solid var(--border);
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
+  line-height: 1;
   color: var(--text-muted);
 }
 
@@ -730,7 +732,7 @@ ol {
   color: var(--text);
 }
 
-.edu-list span {
+.edu-list li > div span {
   display: block;
   font-size: 0.72rem;
   color: var(--text-muted);
